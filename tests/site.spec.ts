@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { members } from '../src/data/members';
+import { batchCount, expectNoOverlap, readAllBatches } from './orbitHelpers';
 
 test('首页、五区导航与进入按钮', async ({ page }) => {
   const errors: string[] = [];
@@ -25,7 +26,7 @@ test('首页、五区导航与进入按钮', async ({ page }) => {
 test('搜索、打开、关闭、Escape与键盘焦点恢复', async ({ page }) => {
   await page.goto('/#team');
   const search = page.getByRole('searchbox');
-  await expect(page.locator('.member-bubble')).toHaveCount(31);
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
   await search.fill(members[0].name);
   await expect(page.locator('.member-bubble')).toHaveCount(1);
   const bubble = page.locator('.member-bubble').first();
@@ -48,21 +49,23 @@ test('搜索、打开、关闭、Escape与键盘焦点恢复', async ({ page }) 
   await page.getByRole('button', { name: '关闭名片' }).click();
   await expect(dialog).toHaveCount(0);
   await page.getByRole('button', { name: '清除搜索', exact: true }).click();
-  await expect(page.locator('.member-bubble')).toHaveCount(31);
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
   await search.fill('不存在的关键词');
   await expect(page.getByText('暂时没有找到同频的关键词。')).toBeVisible();
   await page.getByRole('button', { name: '清除搜索，看看所有伙伴' }).click();
-  await expect(page.locator('.member-bubble')).toHaveCount(31);
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
 });
 
 test('减少动画、暂停漂浮与无横向溢出', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/#team');
-  expect(await page.locator('.bubble-surface').first().evaluate(node => getComputedStyle(node).animationName)).toBe('none');
+  await expect(page.locator('.orbit-stage')).toHaveAttribute('data-pause-reason', 'reduced');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
-  expect(await page.locator('.bubble-surface').first().evaluate(node => getComputedStyle(node).animationName)).toBe('float');
-  await page.getByRole('button', { name: '暂停漂浮' }).click();
-  expect(await page.locator('.bubble-surface').first().evaluate(node => getComputedStyle(node).animationName)).toBe('none');
+  await page.locator('.orbit-stage').scrollIntoViewIfNeeded();
+  await page.mouse.move(0, 0);
+  await expect(page.locator('.orbit-stage')).toHaveAttribute('data-running', 'true');
+  await page.getByRole('button', { name: '暂停星河' }).click();
+  await expect(page.locator('.orbit-stage')).toHaveAttribute('data-pause-reason', 'manual');
   await page.locator('.member-bubble').last().click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.getByRole('button', { name: '关闭名片' }).click();
@@ -106,16 +109,12 @@ test('45人容量、无重叠，每位成员均可找到并展开', async ({ pag
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/tests/fixtures/capacity.html');
   const bubbles = page.locator('.member-bubble');
-  await expect(bubbles).toHaveCount(45);
-  const rects = await bubbles.evaluateAll(nodes => nodes.map(node => {
-    const rect = node.getBoundingClientRect();
-    return { x: rect.x, y: rect.y, right: rect.right, bottom: rect.bottom };
-  }));
-  rects.forEach((a, i) => rects.slice(i + 1).forEach(b => {
-    expect(a.right <= b.x || b.right <= a.x || a.bottom <= b.y || b.bottom <= a.y).toBe(true);
-  }));
+  await expect(bubbles).toHaveCount(batchCount(page, 45));
+  expect(new Set(await readAllBatches(page)).size).toBe(45);
+  await expectNoOverlap(page);
   for (let index = 0; index < 45; index++) {
-    await bubbles.nth(index).click();
+    await page.getByRole('searchbox').fill(`容量示例 ${index + 1}`);
+    await page.getByRole('button', { name: `查看容量示例 ${index + 1}的名片`, exact: true }).click();
     await expect(page.getByRole('dialog')).toContainText(`容量示例 ${index + 1}`);
     await page.getByRole('button', { name: '关闭名片' }).click();
   }

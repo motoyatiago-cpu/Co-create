@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom/client';
+import { Profiler } from 'react';
 import { MemberWall } from '../../src/components/MemberWall';
 import type { Member } from '../../src/types/member';
 import '../../src/styles/global.css';
@@ -15,4 +16,4 @@ const members: Member[] = Array.from({ length: 45 }, (_, index) => ({
   isExample: false,
   tone: 'lavender',
 }));
-createRoot(document.getElementById('root')!).render(<MemberWall members={members} />);
+createRoot(document.getElementById('root')!).render(<Profiler id="member-wall" onRender={() => { const target = window as Window & { wallRenders?: number }; target.wallRenders = (target.wallRenders ?? 0) + 1; }}><MemberWall members={members} /></Profiler>);

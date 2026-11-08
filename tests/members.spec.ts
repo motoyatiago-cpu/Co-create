@@ -1,14 +1,16 @@
 import { test, expect } from '@playwright/test';
 import { members } from '../src/data/members';
+import { batchCount, expectNoOverlap, readAllBatches } from './orbitHelpers';
 
 test('公开数据逐字展示、缺省字段与昵称规则', async ({ page }, testInfo) => {
   // 对应交付截图的手机视口；其余移动用例继续覆盖设备默认的较矮视口。
   if (testInfo.project.name === 'mobile') await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/#team');
-  await expect(page.locator('.member-bubble').first()).toBeInViewport({ ratio: 1 });
+  await expect(page.locator('.orbit-stage')).toBeVisible();
   expect(members).toHaveLength(31);
   expect(new Set(members.map(member => member.id)).size).toBe(31);
-  await expect(page.locator('.bubble-name')).toHaveText(members.map(member => member.name));
+  await expect(page.locator('.bubble-name')).toHaveText(members.slice(0, batchCount(page, members.length)).map(member => member.name));
+  expect(await readAllBatches(page)).toEqual(members.map(member => member.name));
   expect(members.every(member => !member.isExample)).toBe(true);
   expect(members.some(member => member.name === '拼音')).toBe(true);
   expect(members.every(member => !member.avatarUrl && !member.role && !member.strengths && !member.learning)).toBe(true);
@@ -29,7 +31,7 @@ test('公开数据逐字展示、缺省字段与昵称规则', async ({ page }, 
 
 test('关键词来自原话、组合搜索、连续浏览与首尾循环', async ({ page }) => {
   await page.goto('/#team');
-  await page.getByRole('button', { name: '暂停漂浮' }).click();
+  await page.getByRole('button', { name: '暂停星河' }).click();
   const choices = [...new Set(members.flatMap(member => member.keywords))];
   const select = page.getByRole('combobox', { name: '按成员自填关键词探索' });
   const values = await select.locator('option').evaluateAll(nodes => nodes.map(node => (node as HTMLOptionElement).value).filter(Boolean));
@@ -63,7 +65,7 @@ test('关键词来自原话、组合搜索、连续浏览与首尾循环', async
   await page.getByRole('button', { name: '清除筛选，返回全部' }).click();
   await expect(select).toHaveValue('');
   await expect(page.getByRole('searchbox')).toHaveValue('');
-  await expect(page.locator('.member-bubble')).toHaveCount(31);
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
   const withNickname = members.find(member => member.nickname && member.nickname !== member.name)!;
   await page.getByRole('searchbox').fill(withNickname.nickname!);
   await expect(page.getByRole('button', { name: `查看${withNickname.name}的名片`, exact: true })).toBeVisible();
@@ -75,15 +77,12 @@ test('关键词来自原话、组合搜索、连续浏览与首尾循环', async
 test('缺省与长内容fixture在四种视口正常，触屏仍可操作', async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/tests/fixtures/capacity.html');
-  for (const width of [320, 390, 768, 1440]) {
+  for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const bubbles = page.locator('.member-bubble');
-    const rects = await bubbles.evaluateAll(nodes => nodes.map(node => { const r = node.getBoundingClientRect(); return { x: r.x, y: r.y, right: r.right, bottom: r.bottom }; }));
-    for (let i = 0; i < rects.length; i++) for (let j = i + 1; j < rects.length; j++) {
-      const a = rects[i], b = rects[j];
-      expect(a.right <= b.x || b.right <= a.x || a.bottom <= b.y || b.bottom <= a.y).toBe(true);
-    }
+    await expect(bubbles).toHaveCount(batchCount(page, 45));
+    await expectNoOverlap(page);
     if (testInfo.project.name === 'mobile') await bubbles.nth(1).tap();
     else await bubbles.nth(1).click();
     const dialog = page.getByRole('dialog');

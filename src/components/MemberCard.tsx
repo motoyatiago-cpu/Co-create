@@ -9,7 +9,7 @@ export function MemberAvatar({ member, large = false }: { member: Member; large?
   </span>;
 }
 
-export function MemberCard({ member, onClose, onNext, position, total }: { member: Member; onClose: () => void; onNext: () => void; position: number; total: number }) {
+export function MemberCard({ member, onClose, onNext, position, total, orbitSide }: { member: Member; onClose: () => void; onNext: () => void; position: number; total: number; orbitSide?: 'left' | 'right' }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { if (dialog.current) dialog.current.scrollTop = 0; }, [member.id]);
   useEffect(() => {
@@ -20,7 +20,7 @@ export function MemberCard({ member, onClose, onNext, position, total }: { membe
     return () => { node?.close(); document.body.style.overflow = previousOverflow; };
   }, []);
 
-  return <dialog ref={dialog} className={`member-card tone-${member.tone}`} aria-labelledby="member-card-name" aria-describedby="member-card-status" onKeyDown={event => {
+  return <dialog ref={dialog} className={`member-card tone-${member.tone}`} data-orbit-card={Boolean(orbitSide) || undefined} data-side={orbitSide} aria-labelledby="member-card-name" aria-describedby="member-card-status" onKeyDown={event => {
     if (event.key !== 'Tab') return;
     const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input:not(:disabled), [tabindex="0"]'));
     const first = controls[0];

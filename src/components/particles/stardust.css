@@ -1,0 +1,14 @@
+.stardust { position: absolute; inset: 0; z-index: 0; pointer-events: none !important; overflow: hidden; }
+.stardust *, .stardust canvas { pointer-events: none !important; }
+.stardust-hero { mask-image: linear-gradient(90deg, transparent 28%, #000 62%); }
+.stardust-team { opacity: .7; mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent); }
+.static-stars { position: absolute; inset: 0; }
+.static-stars span { position: absolute; border-radius: 50%; }
+.stardust[data-renderer="webgl"] .static-stars { visibility: hidden; }
+.ambient-toggle { color: var(--muted); font-size: 12px; min-height: 44px; padding: 8px 0; text-decoration: underline; text-decoration-color: #9ba3c960; text-underline-offset: 4px; }
+.ambient-toggle:hover:not(:disabled) { color: var(--pink); }
+.ambient-toggle:disabled { cursor: default; text-decoration: none; }
+.team-section { position: relative; isolation: isolate; }
+.team-section > .container { position: relative; z-index: 1; }
+.team-section .ambient-toggle { float: right; margin-top: -42px; }
+@media (max-width: 760px) { .team-section .ambient-toggle { float: none; margin: 0; } .stardust-hero { mask-image: linear-gradient(180deg, transparent 25%, #000 70%); } }
