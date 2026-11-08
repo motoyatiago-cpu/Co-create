@@ -6,7 +6,7 @@ test('首页、五区导航与进入按钮', async ({ page }) => {
   const failed: string[] = [];
   page.on('response', response => { if (response.status() >= 400) failed.push(response.url()); });
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('最正经的1组');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('最正经的 1 组');
   await expect(page.locator('.hero-art img')).toHaveJSProperty('naturalWidth', 1100);
   await expect(page.locator('.hero-nebula canvas')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveClass(/nebula-ready/);

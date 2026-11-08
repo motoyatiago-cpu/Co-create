@@ -2,7 +2,7 @@
 export const copy = {
   studioName: '第1组工作室',
   identity: '北辰青年第四期 · 第1组',
-  titleLines: ['最正经的1组，', '收留最不靠谱的', '脑洞。'],
+  titleLines: ['最正经的 1 组，', '收留最“不靠谱”的', '脑洞。'],
   subtitle: '真正存在的是我们，产品嘛，先别问。',
   description: '一群真实的人，两款虚构的AI概念产品。',
   draftNote: '工作室名称与口号暂定',
