@@ -7,8 +7,8 @@ test('公开数据逐字展示、缺省字段与昵称规则', async ({ page }, 
   if (testInfo.project.name === 'mobile') await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/#team');
   await expect(page.locator('.orbit-stage')).toBeVisible();
-  expect(members).toHaveLength(31);
-  expect(new Set(members.map(member => member.id)).size).toBe(31);
+  expect(members).toHaveLength(32);
+  expect(new Set(members.map(member => member.id)).size).toBe(32);
   await expect(page.locator('.bubble-name')).toHaveText(members.slice(0, batchCount(page, members.length)).map(member => member.name));
   expect(await readAllBatches(page)).toEqual(members.map(member => member.name));
   expect(members.every(member => !member.isExample)).toBe(true);
@@ -65,7 +65,7 @@ test('关键词来自原话、组合搜索、连续浏览与首尾循环', async
   await page.getByRole('button', { name: '清除筛选，返回全部' }).click();
   await expect(select).toHaveValue('');
   await expect(page.getByRole('searchbox')).toHaveValue('');
-  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, members.length));
   const withNickname = members.find(member => member.nickname && member.nickname !== member.name)!;
   await page.getByRole('searchbox').fill(withNickname.nickname!);
   await expect(page.getByRole('button', { name: `查看${withNickname.name}的名片`, exact: true })).toBeVisible();

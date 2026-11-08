@@ -50,7 +50,7 @@ export const MemberOrbit = forwardRef<OrbitHandle, Props>(function MemberOrbit({
     if (!node) return;
     const observer = new ResizeObserver(entries => {
       const { width, height } = entries[0].contentRect;
-      const size = compact ? width < 320 ? 68 : 76 : members.length > 36 ? width < 1100 ? 70 : 72 : width < 1100 ? 80 : 88;
+      const size = compact ? width < 320 ? 68 : 76 : members.length > 36 ? width < 1100 ? 70 : 72 : members.length > 31 ? width < 1100 ? 76 : 80 : width < 1100 ? 80 : 88;
       setGeometry(createGeometry(Math.max(width, 240), height, size));
     });
     observer.observe(node);

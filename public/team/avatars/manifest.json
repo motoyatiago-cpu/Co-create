@@ -1,0 +1,377 @@
+{
+  "description": "Team avatar portraits split from two sprite sheets",
+  "sourceSheets": [
+    {
+      "file": "4.webp",
+      "width": 1774,
+      "height": 887,
+      "figuresPerRow": [
+        6,
+        5
+      ]
+    },
+    {
+      "file": "5.webp",
+      "width": 1774,
+      "height": 887,
+      "figuresPerRow": [
+        6,
+        6
+      ]
+    }
+  ],
+  "background": "transparent",
+  "backgroundNote": "Source alpha channel was clean (no white halo); RGB is zeroed under transparent pixels.",
+  "avatarSize": 512,
+  "margin": "6% of the square side on each side",
+  "order": "source sheet 4 first, then sheet 5; left-to-right, top-to-bottom",
+  "notes": "Figures in each row touch slightly at hair/shoulders, so rows were split at the lowest-coverage (valley) column with a 1-px cut. Fragments belonging to neighbouring portraits at the cut edges were discarded. Sheet 4 bottom row has 5 figures spread across the full width.",
+  "total": 23,
+  "avatars": [
+    {
+      "filename": "01.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 1,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 13,
+        "y": 36,
+        "width": 298,
+        "height": 390
+      }
+    },
+    {
+      "filename": "02.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 2,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 312,
+        "y": 53,
+        "width": 286,
+        "height": 373
+      }
+    },
+    {
+      "filename": "03.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 3,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 601,
+        "y": 37,
+        "width": 276,
+        "height": 389
+      }
+    },
+    {
+      "filename": "04.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 4,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 878,
+        "y": 58,
+        "width": 327,
+        "height": 369
+      }
+    },
+    {
+      "filename": "05.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 5,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1206,
+        "y": 43,
+        "width": 255,
+        "height": 383
+      }
+    },
+    {
+      "filename": "06.png",
+      "sourceSheet": "4.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 6,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1462,
+        "y": 42,
+        "width": 301,
+        "height": 384
+      }
+    },
+    {
+      "filename": "07.png",
+      "sourceSheet": "4.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 1,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 24,
+        "y": 466,
+        "width": 377,
+        "height": 392
+      }
+    },
+    {
+      "filename": "08.png",
+      "sourceSheet": "4.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 2,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 405,
+        "y": 466,
+        "width": 303,
+        "height": 392
+      }
+    },
+    {
+      "filename": "09.png",
+      "sourceSheet": "4.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 3,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 721,
+        "y": 456,
+        "width": 309,
+        "height": 402
+      }
+    },
+    {
+      "filename": "10.png",
+      "sourceSheet": "4.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 4,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1040,
+        "y": 471,
+        "width": 340,
+        "height": 387
+      }
+    },
+    {
+      "filename": "11.png",
+      "sourceSheet": "4.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 5,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1393,
+        "y": 453,
+        "width": 369,
+        "height": 405
+      }
+    },
+    {
+      "filename": "12.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 1,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 22,
+        "y": 36,
+        "width": 301,
+        "height": 396
+      }
+    },
+    {
+      "filename": "13.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 2,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 324,
+        "y": 64,
+        "width": 307,
+        "height": 368
+      }
+    },
+    {
+      "filename": "14.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 3,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 633,
+        "y": 48,
+        "width": 276,
+        "height": 384
+      }
+    },
+    {
+      "filename": "15.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 4,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 910,
+        "y": 38,
+        "width": 266,
+        "height": 395
+      }
+    },
+    {
+      "filename": "16.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 5,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1177,
+        "y": 36,
+        "width": 266,
+        "height": 396
+      }
+    },
+    {
+      "filename": "17.png",
+      "sourceSheet": "5.webp",
+      "row": 1,
+      "rowPosition": "top",
+      "column": 6,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1444,
+        "y": 47,
+        "width": 321,
+        "height": 384
+      }
+    },
+    {
+      "filename": "18.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 1,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 10,
+        "y": 454,
+        "width": 292,
+        "height": 397
+      }
+    },
+    {
+      "filename": "19.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 2,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 303,
+        "y": 458,
+        "width": 296,
+        "height": 393
+      }
+    },
+    {
+      "filename": "20.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 3,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 602,
+        "y": 460,
+        "width": 282,
+        "height": 391
+      }
+    },
+    {
+      "filename": "21.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 4,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 889,
+        "y": 469,
+        "width": 295,
+        "height": 382
+      }
+    },
+    {
+      "filename": "22.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 5,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1188,
+        "y": 453,
+        "width": 271,
+        "height": 398
+      }
+    },
+    {
+      "filename": "23.png",
+      "sourceSheet": "5.webp",
+      "row": 2,
+      "rowPosition": "bottom",
+      "column": 6,
+      "width": 512,
+      "height": 512,
+      "sourceBounds": {
+        "x": 1473,
+        "y": 454,
+        "width": 282,
+        "height": 397
+      }
+    }
+  ]
+}

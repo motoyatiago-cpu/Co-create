@@ -6,6 +6,7 @@ import { expectNoOverlap } from './orbitHelpers';
 
 async function enterOrbit(page: Page) {
   const stage = page.locator('.orbit-stage');
+  if (!await stage.isVisible() && await page.getByRole('navigation', { name: '主导航', exact: true }).count()) await page.getByRole('navigation', { name: '主导航', exact: true }).getByRole('link', { name: '团队成员', exact: true }).click();
   await stage.scrollIntoViewIfNeeded();
   await page.mouse.move(0, 0);
   await expect(stage).toHaveAttribute('data-ready', 'true');
@@ -14,7 +15,7 @@ async function enterOrbit(page: Page) {
 
 test('完整120秒轨迹采样：31/45人、窄屏和循环接点均无圆形碰撞或跳位', async () => {
   test.setTimeout(45000);
-  for (const [width, height, size, count] of [[1280, 820, 88, 31], [928, 820, 80, 31], [1280, 1000, 72, 45], [928, 1000, 70, 45], [335, 480, 76, 8], [265, 480, 68, 8]]) {
+  for (const [width, height, size, count] of [[1280, 820, 88, 31], [1160, 820, 80, 32], [800, 820, 76, 32], [928, 820, 80, 31], [1280, 1000, 72, 45], [928, 1000, 70, 45], [335, 480, 76, 8], [265, 480, 68, 8]]) {
     const geometry = createGeometry(width, height, size);
     const initial = separate(targetsAt(geometry, count, .017), geometry);
     let previous = initial;
@@ -94,7 +95,7 @@ test('鼠标移入和真实触屏点按均能选中流动中的星球', async ({
   await page.getByRole('button', { name: '关闭名片' }).click();
 });
 
-test('全部31位均能从全局搜索找到并实际打开，单人保持中心稳定', async ({ page }) => {
+test('全部32位均能从全局搜索找到并实际打开，单人保持中心稳定', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/#team');
   for (const member of members) {
@@ -104,6 +105,7 @@ test('全部31位均能从全局搜索找到并实际打开，单人保持中心
     await expect(page.getByRole('dialog').getByRole('heading', { level: 3 })).toHaveText(member.name);
     await page.keyboard.press('Escape'); await expect(button).toBeFocused();
   }
+  await page.getByRole('navigation', { name: '主导航', exact: true }).getByRole('link', { name: '团队成员', exact: true }).click();
   await page.getByRole('searchbox').fill('拼音');
   const stage = page.locator('.orbit-stage');
   await expect(page.locator('.member-bubble')).toHaveCount(1);
@@ -201,6 +203,7 @@ test('WebGL不支持与低性能配置均保留静态背景和可用成员', asy
   await page.goto('/');
   await expect(page.locator('.stardust-hero')).toHaveAttribute('data-renderer', 'static');
   await expect(page.locator('.stardust canvas')).toHaveCount(0);
+  await page.getByRole('navigation', { name: '主导航', exact: true }).getByRole('link', { name: '团队成员', exact: true }).click();
   await page.getByRole('searchbox').fill('拼音');
   await page.getByRole('button', { name: '查看拼音的名片', exact: true }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
@@ -211,6 +214,7 @@ test('低资源设备直接使用静态星点，成员交互仍完整', async ({
   await page.goto('/');
   await expect(page.locator('.stardust canvas')).toHaveCount(0);
   await expect(page.locator('.stardust-hero')).toHaveAttribute('data-renderer', 'static');
+  await page.getByRole('navigation', { name: '主导航', exact: true }).getByRole('link', { name: '团队成员', exact: true }).click();
   await page.getByRole('searchbox').fill('拼音');
   await page.getByRole('button', { name: '查看拼音的名片', exact: true }).click();
   await expect(page.getByRole('dialog').getByRole('heading', { level: 3 })).toHaveText('拼音');

@@ -357,5 +357,7 @@ export const members: Member[] = [
     ],
     "isExample": false,
     "tone": "cyan"
-  }
+  },
+  // 用户在本轮合并中明确要求保留32人；新增项来自伙伴分支。
+  { id: 'member-28', name: '胡洁', nickname: 'Jessica', intro: '保持好奇心。', keywords: ['INFJ'], isExample: false, tone: 'pink' },
 ];

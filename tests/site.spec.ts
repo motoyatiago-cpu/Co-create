@@ -26,7 +26,7 @@ test('首页、五区导航与进入按钮', async ({ page }) => {
 test('搜索、打开、关闭、Escape与键盘焦点恢复', async ({ page }) => {
   await page.goto('/#team');
   const search = page.getByRole('searchbox');
-  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, members.length));
   await search.fill(members[0].name);
   await expect(page.locator('.member-bubble')).toHaveCount(1);
   const bubble = page.locator('.member-bubble').first();
@@ -49,11 +49,11 @@ test('搜索、打开、关闭、Escape与键盘焦点恢复', async ({ page }) 
   await page.getByRole('button', { name: '关闭名片' }).click();
   await expect(dialog).toHaveCount(0);
   await page.getByRole('button', { name: '清除搜索', exact: true }).click();
-  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, members.length));
   await search.fill('不存在的关键词');
   await expect(page.getByText('暂时没有找到同频的关键词。')).toBeVisible();
   await page.getByRole('button', { name: '清除搜索，看看所有伙伴' }).click();
-  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, 31));
+  await expect(page.locator('.member-bubble')).toHaveCount(batchCount(page, members.length));
 });
 
 test('减少动画、暂停漂浮与无横向溢出', async ({ page }) => {
@@ -87,6 +87,7 @@ test('两款产品与四格故事均可进入完整体验', async ({ page, reque
   ];
 
   for (const experience of experiences) {
+    await page.getByRole('navigation', { name: '主导航', exact: true }).getByRole('link', { name: experience.path.includes('/story/') ? '共创故事' : '产品展厅', exact: true }).click();
     await expect(page.getByRole('link', { name: experience.name })).toHaveAttribute('target', '_blank');
     const response = await request.get(experience.path);
     expect(response.ok()).toBe(true);
