@@ -19,10 +19,12 @@ test('源码包32位成员均可搜索并展开原始名片', async ({ page }) =
   }
 });
 
-test('四位已确认联系卡片与32人墙在五种宽度正常', async ({ page }) => {
+test('五位联系卡片顺序与32人墙在五种宽度正常', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/#contact');
-  await expect(page.locator('.contact-card')).toHaveCount(4);
+  await expect(page.locator('.contact-card')).toHaveCount(5);
+  await expect(page.locator('.contact-card__name')).toHaveText(['冯丽娜Nivis', '于幸繁Struggle.呆', '陈佳阿若', '臧文琪呵', '余海燕@me']);
+  await expect(page.getByRole('link', { name: '发邮件给余海燕：fercy666@163.com', exact: true })).toHaveAttribute('href', 'mailto:fercy666@163.com');
   for (const person of copy.contact.people) {
     await expect(page.getByRole('link', { name: `发邮件给${person.name}：${person.email}`, exact: true })).toHaveAttribute('href', `mailto:${person.email}`);
   }

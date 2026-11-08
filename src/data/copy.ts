@@ -22,9 +22,10 @@ export const copy = {
     invite: '合作邀请与公开联系渠道 · 欢迎来信',
     people: [
       { name: '冯丽娜', nickname: 'Nivis', email: 'cclia1126@gmail.com' },
+      { name: '于幸繁', nickname: 'Struggle.呆', email: 'strggle521yu@163.com' },
       { name: '陈佳', nickname: '阿若', email: 'cuijun202608@163.com' },
       { name: '臧文琪', nickname: '呵', email: '2731161093@qq.com' },
-      { name: '于幸繁', nickname: 'Struggle.呆', email: 'strggle521yu@163.com' },
+      { name: '余海燕', nickname: '@me', email: 'fercy666@163.com' },
     ],
   },
 } as const;
