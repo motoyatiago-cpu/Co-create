@@ -46,10 +46,10 @@
       comp.release.value = .35;
 
       var speaker = ctx.createGain();
-      speaker.gain.value = muted ? 0 : .78;
+      speaker.gain.value = muted ? 0 : 1;
 
       var capture = ctx.createGain();
-      capture.gain.value = .9;
+      capture.gain.value = 1;
 
       var dest = ctx.createMediaStreamDestination ? ctx.createMediaStreamDestination() : null;
 
@@ -59,10 +59,21 @@
       send.connect(convolver);
       convolver.connect(wet);
       wet.connect(comp);
-      comp.connect(speaker);
+      // Shared modest makeup gain and peak control for playback and export.
+      var makeup = ctx.createGain();
+      makeup.gain.value = 1.15;
+      var limiter = ctx.createDynamicsCompressor();
+      limiter.threshold.value = -4;
+      limiter.knee.value = 0;
+      limiter.ratio.value = 20;
+      limiter.attack.value = .001;
+      limiter.release.value = .15;
+      comp.connect(makeup);
+      makeup.connect(limiter);
+      limiter.connect(speaker);
       speaker.connect(ctx.destination);
       if (dest){
-        comp.connect(capture);
+        limiter.connect(capture);
         capture.connect(dest);
       }
 
@@ -417,9 +428,9 @@
     stopElement(.35);
     var gen = generation + 1;
     return (a.ctx.state === 'suspended' ? a.ctx.resume() : Promise.resolve())
-      .catch(function(){})
+      .catch(function(){ return false; })
       .then(function(){
-        if (gen !== generation + 1) return null;
+        if (a.ctx.state !== 'running' || gen !== generation + 1) return null;
         if (playing){
           teardown(playing, opts.hard ? .4 : 1.2);
           playing = null;
@@ -448,7 +459,7 @@
     var now = audio.ctx.currentTime;
     try{
       audio.speaker.gain.cancelScheduledValues(now);
-      audio.speaker.gain.setTargetAtTime(muted ? 0 : .78, now, .08);
+      audio.speaker.gain.setTargetAtTime(muted ? 0 : 1, now, .08);
     }catch(e){}
   };
 
