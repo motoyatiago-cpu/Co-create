@@ -36,9 +36,11 @@ export function MemberCard({ member, onClose }: { member: Member; onClose: () =>
     <p id="member-card-status" className="card-status">{member.isExample ? '示例资料 · 非真实成员' : '认识一位共创伙伴'}</p>
     <MemberAvatar member={member} large />
     <h3 id="member-card-name">{member.name}</h3>
+    {member.nickname && <p className="member-nickname">昵称 · {member.nickname}</p>}
     {member.role?.confirmed && <p className="member-role">{member.role.label}</p>}
-    <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map(keyword => <li key={keyword}>{keyword}</li>)}</ul>
-    <dl><dt>擅长的事情</dt><dd>{member.strengths}</dd><dt>希望学习或交流</dt><dd>{member.learning}</dd></dl>
+    {member.keywords.length > 0 && <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map(keyword => <li key={keyword}>{keyword}</li>)}</ul>}
+    {member.bio && <p className="member-bio">{member.bio}</p>}
+    {(member.strengths || member.learning) && <dl>{member.strengths && <><dt>擅长的事情</dt><dd>{member.strengths}</dd></>}{member.learning && <><dt>希望学习或交流</dt><dd>{member.learning}</dd></>}</dl>}
     <p className="card-end">每一个脑洞，都值得被接住。</p>
   </dialog>;
 }

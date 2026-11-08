@@ -18,21 +18,28 @@
 .motion-button { min-height: 48px; display: inline-flex; gap: 10px; align-items: center; white-space: nowrap; font-size: 14px; padding-inline: 8px; }
 .motion-button:hover { color: var(--pink); }
 .result-count { font-size: 12px; color: var(--muted); margin-top: 16px; }
-.bubble-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 30px 26px; padding: 36px 8px; }
-.bubble-grid li { min-width: 0; display: flex; justify-content: center; padding-block: 6px; }
-.member-bubble { width: min(100%, 176px); aspect-ratio: 1; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; isolation: isolate; background: #686480 url('/art/moon.webp') center/cover; box-shadow: inset 0 0 0 1px #f4e9d470; color: #fff9ed; animation: float var(--float-duration, 6s) ease-in-out var(--float-delay, 0s) infinite; transition: box-shadow .2s; }
-.member-bubble::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: #131a3a44; z-index: -1; }
 .tone-pink { --tone: #f2a9c4; }
 .tone-cyan { --tone: #7ee0e3; }
 .tone-lavender { --tone: #a98cf5; }
-.member-bubble.tone-pink { background-color: #73516a; background-blend-mode: luminosity; }
-.member-bubble.tone-cyan { background-color: #4d7483; background-blend-mode: luminosity; }
-.member-bubble:hover, .member-bubble:focus-visible { box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--tone); animation-play-state: paused; outline-color: var(--text); }
+.member-gallery { position: relative; margin-top: 22px; min-height: 240px; overflow-x: clip; }
+.member-gallery::before { content: ''; position: absolute; inset: 8% -6% 0; background: radial-gradient(ellipse at 50% 42%, #a98cf524, transparent 62%), radial-gradient(ellipse at 18% 76%, #f2a9c41c, transparent 54%), radial-gradient(ellipse at 84% 24%, #7ee0e31a, transparent 50%); pointer-events: none; }
+.member-gallery__stage { position: absolute; inset: 0; }
+.member-tile { position: absolute; padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.22, .68, .24, 1) var(--tile-delay, 0ms), opacity .3s ease; }
+.member-tile[hidden] { display: none; }
+.member-tile__float { display: block; width: 100%; height: 100%; transform-style: preserve-3d; animation: tile-float var(--tile-float-duration, 6s) ease-in-out var(--tile-float-delay, 0s) infinite; }
+.member-tile__inner { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; padding: 9px 9px 0; border-radius: 18px; background: linear-gradient(158deg, #fbf5e8, #e9ddc9); box-shadow: 0 26px 46px -20px #050818d9, 0 0 34px -18px var(--tone), inset 0 1px 0 #ffffffc0; transform: translateZ(0); transition: transform .32s ease, box-shadow .32s ease; animation: tile-in .62s cubic-bezier(.22, .68, .24, 1) var(--tile-delay, 0ms) backwards; }
+.member-tile__portrait { position: relative; display: grid; place-items: center; flex: 1; min-height: 0; overflow: hidden; border-radius: 12px; background: radial-gradient(ellipse at 50% 30%, #fffdf8 0%, #efe3cf 62%, #ddcdb4 100%); }
+.member-tile__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.member-tile__initial { font-family: var(--serif); font-size: clamp(26px, 3vw, 42px); font-style: italic; color: #6d5981; }
+.member-tile__name { margin-top: 7px; overflow: hidden; font-family: var(--serif); font-size: clamp(13px, 1.15vw, 17px); line-height: 1.35; color: #1a2246; white-space: nowrap; text-overflow: ellipsis; }
+.member-tile__nickname { margin: 1px 0 7px; overflow: hidden; font-size: 10px; line-height: 1.5; color: #71677f; white-space: nowrap; text-overflow: ellipsis; }
+.member-tile:hover .member-tile__inner, .member-tile:focus-visible .member-tile__inner { transform: translateZ(56px) scale(1.035); box-shadow: 0 36px 60px -20px #050818f2, 0 0 44px -12px var(--tone), inset 0 1px 0 #ffffffd9; }
+.member-tile:hover .member-tile__float, .member-tile:focus-visible .member-tile__float { animation-play-state: paused; }
+.member-tile:focus-visible { outline: none; }
+.member-tile:focus-visible .member-tile__inner { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.member-gallery[data-paused] .member-tile__float { animation: none; }
 .member-avatar { display: block; font-family: var(--serif); font-size: 36px; font-style: italic; line-height: 1.25; }
 .member-avatar img { width: 48px; height: 48px; object-fit: cover; border-radius: 50%; }
-.bubble-name { font-family: var(--serif); font-size: 20px; line-height: 1.5; margin-top: 5px; max-width: 85%; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.bubble-caption { font-size: 11px; line-height: 1.6; margin-top: 4px; color: #f7eaf8; }
-.wall[data-paused] .member-bubble { animation: none; }
 .wall-end { text-align: center; color: var(--muted); font-family: var(--serif); font-size: 15px; padding-block: 16px 4px; }
 .wall-end::before { content: '· · ·'; display: block; letter-spacing: .5em; color: #c5b7ce; margin-bottom: 10px; }
 .empty-state { min-height: 220px; display: flex; gap: 20px; align-items: center; justify-content: center; flex-direction: column; text-align: center; }
@@ -42,21 +49,23 @@
 .member-card :focus-visible { outline-color: var(--bg); outline-offset: 3px; }
 .card-close { position: absolute; right: 12px; top: 12px; }
 .card-status { display: inline-block; border-radius: 24px; padding: 3px 12px; margin: 0 20px 20px 0; background: #f2a9c455; color: #77394f; font-size: 12px; }
-.member-card .large { font-size: 32px; color: #6d5981; margin-bottom: 8px; }
-.member-card .large img { width: 72px; height: 72px; }
+.member-card .large { font-size: 32px; color: #6d5981; margin-bottom: 14px; }
+.member-card .large img { width: 104px; height: 104px; border-radius: 24px; background: #efe3cf; }
 .member-card h3 { font-size: 38px; overflow-wrap: anywhere; }
+.member-nickname { margin-top: 4px; font-size: 13px; color: #6d5981; }
 .member-role { margin-top: 8px; font-size: 13px; color: #4d4763; }
-.keyword-list { display: flex; gap: 8px; flex-wrap: wrap; margin-block: 20px 28px; }
+.keyword-list { display: flex; gap: 8px; flex-wrap: wrap; margin-block: 18px 20px; }
 .keyword-list li { border-radius: 24px; padding: 3px 14px; background: #a98cf528; font-family: var(--serif); font-size: 16px; }
+.member-bio { font-family: var(--serif); font-size: 17px; line-height: 1.9; color: #3d3550; }
 .member-card dt { font-family: var(--serif); font-size: 20px; font-weight: 600; margin-top: 22px; }
 .member-card dd { margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #4d455e; overflow-wrap: anywhere; }
 .card-end { margin-top: 30px; padding-top: 20px; border-top: 1px solid #131a3a25; color: #70596f; font-family: var(--serif); font-size: 14px; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes tile-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes tile-in { from { opacity: 0; transform: translateY(22px) scale(.94); } to { opacity: 1; transform: none; } }
 @media (max-width: 1050px) {
   .team-intro { gap: 36px; grid-template-columns: 1.4fr 1fr; }
   .team-values { font-size: 24px; }
   .team-values li:not(:last-child)::after { margin-inline: 10px; }
-  .bubble-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
 }
 @media (max-width: 760px) {
   .team-intro { display: block; padding-bottom: 30px; }
@@ -72,12 +81,9 @@
   .search-field { width: 100%; }
   .motion-button { align-self: flex-end; min-height: 44px; font-size: 13px; }
   .result-count { margin-top: 0; }
-  .bubble-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 24px 5px; gap: 20px 14px; }
+  .member-gallery { margin-top: 16px; }
   .member-avatar { font-size: 25px; }
-  .bubble-name { font-size: 15px; margin-top: 2px; }
-  .bubble-caption { font-size: 10px; margin-top: 2px; }
   .member-avatar img { width: 30px; height: 30px; }
   .member-card { padding: 28px; max-height: calc(100dvh - 32px); }
   .member-card h3 { font-size: 32px; }
 }
-@media (max-width: 360px) { .bubble-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; } }

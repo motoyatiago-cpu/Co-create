@@ -4,10 +4,14 @@ export interface Member {
   /** 稳定且唯一，不要用数组序号替代真实成员 ID。 */
   id: string;
   name: string;
-  keywords: [string, string, string];
-  strengths: string;
-  learning: string;
-  /** 只使用已获公开许可的头像，本地路径推荐放 public/avatars/。 */
+  nickname?: string;
+  /** 名册中的一句话介绍。 */
+  bio?: string;
+  keywords: string[];
+  /** 仅示例名片使用的旧字段。 */
+  strengths?: string;
+  learning?: string;
+  /** 只使用已获公开许可的头像，本地路径推荐放 public/team/avatars/。 */
   avatarUrl?: string;
   /** 只有本人/团队确认的组织角色才能填写。 */
   role?: { label: string; confirmed: true };

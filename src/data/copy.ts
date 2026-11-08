@@ -14,8 +14,18 @@ export const copy = {
     description: '我们是北辰青年第四期AI线上实习第1组。2026年11月7日，一场《根本没有这样的AI产品发布会》把我们聚在一起。从日常烦恼出发，在两间临时研发室里，把独立的想法变成共同的脑洞。这里有创意，也有细腻的倾听；有温暖与包容，也有愿意接住彼此的同频。',
     keywords: ['脑洞', '创意', '温暖', '包容', '细腻', '同频', '回声', '群策群力'],
     wallTitle: '在这里，找到你的同频。',
-    wallHint: '点击一颗泡泡，认识一个有趣的灵魂。',
+    wallHint: '点击一张立体名片，认识一个有趣的灵魂。',
     exampleNotice: '完整成员资料整理中，以下均为交互示例，非真实成员。',
+    avatarNotice: '卡通形象为团队统一视觉，非真实照片。',
+  },
+  contact: {
+    invite: '合作邀请与公开联系渠道 · 欢迎来信',
+    people: [
+      { name: '冯丽娜', nickname: 'Nivis', email: 'cclia1126@gmail.com' },
+      { name: '陈佳', nickname: '阿若', email: 'cuijun202608@163.com' },
+      { name: '臧文琪', nickname: '呵', email: '2731161093@qq.com' },
+      { name: '于幸繁', nickname: 'Struggle.呆', email: 'strggle521yu@163.com' },
+    ],
   },
 } as const;
 
