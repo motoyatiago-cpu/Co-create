@@ -14,6 +14,7 @@ export function Hero() {
           <a className="button button-primary" href="#team">{copy.enterLabel}<Icon name="arrow" /></a>
           <a className="text-link" href="#products">{copy.productsLabel}</a>
         </div>
+        <p className="hero-enter-hint">{copy.enterHint}</p>
       </div>
       <div className="hero-art" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}art/nebula.webp`} alt="" width="1024" height="1024" fetchPriority="high" /></div>
     </div>

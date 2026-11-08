@@ -12,7 +12,7 @@ export function TeamSection() {
     <div className="team-intro"><div><h2 id="team-heading">{copy.team.title.map(line => <span key={line}>{line}</span>)}</h2><p className="team-description">{copy.team.description}</p></div>
       <ul className="team-values" aria-label="成员眼中的第1组">{copy.team.keywords.map(word => <li key={word}>{word}</li>)}</ul>
     </div>
-    <div className="wall-heading"><h3>{copy.team.wallTitle}</h3><p>{copy.team.wallHint}</p><p className="example-notice">{notice}</p></div>
+    <div className="wall-heading"><h3>{copy.team.wallTitle}</h3><p>{copy.team.wallHint}</p>{(hasExamples || !members.length) && <p className="example-notice">{notice}</p>}</div>
     <MemberWall members={members} />
   </div></section>;
 }

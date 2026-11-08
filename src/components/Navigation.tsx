@@ -5,6 +5,13 @@ export function Navigation() {
   const [active, setActive] = useState('home');
 
   useEffect(() => {
+    // 深链接首次打开时，锚点可能先于React内容出现；挂载后再定位一次。
+    const id = window.location.hash.slice(1);
+    const frame = requestAnimationFrame(() => {
+      if (navigation.some(item => item.id === id)) {
+        document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'instant' });
+      }
+    });
     const observer = new IntersectionObserver(entries => {
       const visible = entries.filter(entry => entry.isIntersecting);
       if (visible[0]) setActive(visible[0].target.id);
@@ -13,7 +20,7 @@ export function Navigation() {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
-    return () => observer.disconnect();
+    return () => { cancelAnimationFrame(frame); observer.disconnect(); };
   }, []);
 
   return <header className="site-header">

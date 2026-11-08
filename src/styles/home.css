@@ -17,6 +17,7 @@
 .hero-description { color: #b9b2cd; font-family: var(--serif); margin-top: 12px; font-size: 19px; }
 .draft-note { margin-top: 18px; font-size: 14px; color: var(--subtle); }
 .hero-actions { display: flex; gap: 36px; align-items: center; margin-top: 32px; }
+.hero-enter-hint { margin-top: 12px; color: var(--muted); font-size: 13px; }
 .hero-art { position: absolute; right: -24px; top: 12px; width: 60%; pointer-events: none; }
 .hero-art img { width: 100%; height: auto; mask-image: radial-gradient(ellipse at center, #000 46%, transparent 73%); }
 .hero-foot { display: flex; align-items: center; gap: 30px; padding-block: 10px 38px; font-size: 16px; font-family: var(--serif); }

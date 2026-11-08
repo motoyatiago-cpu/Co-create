@@ -9,8 +9,9 @@ export function MemberAvatar({ member, large = false }: { member: Member; large?
   </span>;
 }
 
-export function MemberCard({ member, onClose }: { member: Member; onClose: () => void }) {
+export function MemberCard({ member, onClose, onNext, position, total }: { member: Member; onClose: () => void; onNext: () => void; position: number; total: number }) {
   const dialog = useRef<HTMLDialogElement>(null);
+  useEffect(() => { if (dialog.current) dialog.current.scrollTop = 0; }, [member.id]);
   useEffect(() => {
     const node = dialog.current;
     const previousOverflow = document.body.style.overflow;
@@ -34,11 +35,17 @@ export function MemberCard({ member, onClose }: { member: Member; onClose: () =>
   }}>
     <button className="icon-button card-close" onClick={onClose} aria-label="关闭名片" autoFocus><Icon name="close" /></button>
     <p id="member-card-status" className="card-status">{member.isExample ? '示例资料 · 非真实成员' : '认识一位共创伙伴'}</p>
-    <MemberAvatar member={member} large />
-    <h3 id="member-card-name">{member.name}</h3>
+    <MemberAvatar key={member.id} member={member} large />
+    <div aria-live="polite" aria-atomic="true"><h3 id="member-card-name">{member.name}</h3>
+    {member.nickname?.trim() && member.nickname !== member.name && <p className="member-nickname">{member.nickname}</p>}</div>
     {member.role?.confirmed && <p className="member-role">{member.role.label}</p>}
-    <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map(keyword => <li key={keyword}>{keyword}</li>)}</ul>
-    <dl><dt>擅长的事情</dt><dd>{member.strengths}</dd><dt>希望学习或交流</dt><dd>{member.learning}</dd></dl>
-    <p className="card-end">每一个脑洞，都值得被接住。</p>
+    {member.keywords.length > 0 && <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map((keyword, index) => <li key={`${keyword}-${index}`}>{keyword}</li>)}</ul>}
+    {member.intro?.trim() && <div className="member-intro"><h4>TA这样介绍自己</h4><p>{member.intro}</p></div>}
+    {(member.strengths?.trim() || member.learning?.trim()) && <dl>
+      {member.strengths?.trim() && <><dt>愿意分享的事情</dt><dd>{member.strengths}</dd></>}
+      {member.learning?.trim() && <><dt>希望学习或交流</dt><dd>{member.learning}</dd></>}
+    </dl>}
+    {!member.intro?.trim() && !member.strengths?.trim() && !member.learning?.trim() && <p className="member-quiet-note">这位伙伴暂未填写个人介绍。</p>}
+    <div className="card-end"><span>{position} / {total}{total === 1 ? ' · 当前筛选仅此一位' : ''}</span><button className="next-member" onClick={onNext} disabled={total < 2}>认识下一位<Icon name="arrow" /></button></div>
   </dialog>;
 }
