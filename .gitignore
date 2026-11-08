@@ -10,3 +10,6 @@ references/
 handoff/
 .claude/settings.local.json
 .DS_Store
+
+# 单文件离线版（可重新生成）
+/第1组工作室-双击打开.html

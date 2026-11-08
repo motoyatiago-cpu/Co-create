@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { useAmbientMotion, useMedia } from './motion/preferences';
 
 THREE.ColorManagement.enabled = false;
 
@@ -120,14 +119,11 @@ type CardPlane = {
 };
 
 export function ChapterField({ active }: { active: number }) {
-  const { paused } = useAmbientMotion();
-  const coarse = useMedia('(pointer: coarse)');
   const hostRef = useRef<HTMLDivElement>(null);
   const activeRef = useRef(active);
   activeRef.current = active;
 
   useEffect(() => {
-    if (paused || coarse) return;
     const host = hostRef.current;
     if (!host) return;
 
@@ -348,10 +344,9 @@ export function ChapterField({ active }: { active: number }) {
       glows.forEach(sprite => (sprite.material as THREE.SpriteMaterial).dispose());
       glowTexture.dispose();
       renderer.dispose();
-      renderer.forceContextLoss();
       renderer.domElement.remove();
     };
-  }, [paused, coarse]);
+  }, []);
 
   return <div ref={hostRef} className="chapter-field" aria-hidden="true" />;
 }

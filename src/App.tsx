@@ -54,7 +54,7 @@ export default function App() {
   return <>
     <a className="skip-link" href="#team">跳到团队成员</a>
     <Navigation active={page} />
-    <main><ChapterDeck active={page}><Hero active={page === 'home'} /><TeamSection active={page === 'team'} /><ModuleSlots /></ChapterDeck></main>
+    <main><ChapterDeck active={page}><Hero /><TeamSection /><ModuleSlots /></ChapterDeck></main>
     <footer className="site-footer container"><p>{copy.studioName}<span>北辰青年第四期AI线上实习 · 集体共创作业</span></p><a className="text-link" href="#home">回到首页</a></footer>
   </>;
 }

@@ -9,9 +9,8 @@ export function MemberAvatar({ member, large = false }: { member: Member; large?
   </span>;
 }
 
-export function MemberCard({ member, onClose, onNext, position, total, orbitSide }: { member: Member; onClose: () => void; onNext: () => void; position: number; total: number; orbitSide?: 'left' | 'right' }) {
+export function MemberCard({ member, onClose }: { member: Member; onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
-  useEffect(() => { if (dialog.current) dialog.current.scrollTop = 0; }, [member.id]);
   useEffect(() => {
     const node = dialog.current;
     const previousOverflow = document.body.style.overflow;
@@ -20,7 +19,7 @@ export function MemberCard({ member, onClose, onNext, position, total, orbitSide
     return () => { node?.close(); document.body.style.overflow = previousOverflow; };
   }, []);
 
-  return <dialog ref={dialog} className={`member-card tone-${member.tone}`} data-orbit-card={Boolean(orbitSide) || undefined} data-side={orbitSide} aria-labelledby="member-card-name" aria-describedby="member-card-status" onKeyDown={event => {
+  return <dialog ref={dialog} className={`member-card tone-${member.tone}`} aria-labelledby="member-card-name" aria-describedby="member-card-status" onKeyDown={event => {
     if (event.key !== 'Tab') return;
     const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input:not(:disabled), [tabindex="0"]'));
     const first = controls[0];
@@ -35,17 +34,13 @@ export function MemberCard({ member, onClose, onNext, position, total, orbitSide
   }}>
     <button className="icon-button card-close" onClick={onClose} aria-label="关闭名片" autoFocus><Icon name="close" /></button>
     <p id="member-card-status" className="card-status">{member.isExample ? '示例资料 · 非真实成员' : '认识一位共创伙伴'}</p>
-    <MemberAvatar key={member.id} member={member} large />
-    <div aria-live="polite" aria-atomic="true"><h3 id="member-card-name">{member.name}</h3>
-    {member.nickname?.trim() && member.nickname !== member.name && <p className="member-nickname">{member.nickname}</p>}</div>
+    <MemberAvatar member={member} large />
+    <h3 id="member-card-name">{member.name}</h3>
+    {member.nickname && <p className="member-nickname">昵称 · {member.nickname}</p>}
     {member.role?.confirmed && <p className="member-role">{member.role.label}</p>}
-    {member.keywords.length > 0 && <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map((keyword, index) => <li key={`${keyword}-${index}`}>{keyword}</li>)}</ul>}
-    {member.intro?.trim() && <div className="member-intro"><h4>TA这样介绍自己</h4><p>{member.intro}</p></div>}
-    {(member.strengths?.trim() || member.learning?.trim()) && <dl>
-      {member.strengths?.trim() && <><dt>愿意分享的事情</dt><dd>{member.strengths}</dd></>}
-      {member.learning?.trim() && <><dt>希望学习或交流</dt><dd>{member.learning}</dd></>}
-    </dl>}
-    {!member.intro?.trim() && !member.strengths?.trim() && !member.learning?.trim() && <p className="member-quiet-note">这位伙伴暂未填写个人介绍。</p>}
-    <div className="card-end"><span>{position} / {total}{total === 1 ? ' · 当前筛选仅此一位' : ''}</span><button className="next-member" onClick={onNext} disabled={total < 2}>认识下一位<Icon name="arrow" /></button></div>
+    {member.keywords.length > 0 && <ul className="keyword-list" aria-label="个人关键词">{member.keywords.map(keyword => <li key={keyword}>{keyword}</li>)}</ul>}
+    {member.bio && <p className="member-bio">{member.bio}</p>}
+    {(member.strengths || member.learning) && <dl>{member.strengths && <><dt>擅长的事情</dt><dd>{member.strengths}</dd></>}{member.learning && <><dt>希望学习或交流</dt><dd>{member.learning}</dd></>}</dl>}
+    <p className="card-end">每一个脑洞，都值得被接住。</p>
   </dialog>;
 }

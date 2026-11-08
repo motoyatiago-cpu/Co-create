@@ -5,11 +5,13 @@ export interface Member {
   id: string;
   name: string;
   nickname?: string;
-  intro?: string;
+  /** 名册中的一句话介绍。 */
+  bio?: string;
   keywords: string[];
+  /** 仅示例名片使用的旧字段。 */
   strengths?: string;
   learning?: string;
-  /** 只使用已获公开许可的头像，本地路径推荐放 public/avatars/。 */
+  /** 只使用已获公开许可的头像，本地路径推荐放 public/team/avatars/。 */
   avatarUrl?: string;
   /** 只有本人/团队确认的组织角色才能填写。 */
   role?: { label: string; confirmed: true };

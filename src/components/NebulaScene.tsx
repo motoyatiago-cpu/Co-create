@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { useAmbientMotion, useMedia } from './motion/preferences';
 
 THREE.ColorManagement.enabled = false;
 
@@ -302,13 +301,10 @@ function buildStarGeometry(random: () => number, count: number) {
   return geometry;
 }
 
-export function NebulaScene({ enabled = true }: { enabled?: boolean }) {
-  const { paused } = useAmbientMotion();
-  const coarse = useMedia('(pointer: coarse)');
+export function NebulaScene() {
   const hostRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (paused || coarse || !enabled) return;
     const host = hostRef.current;
     const hero = host?.closest<HTMLElement>('.hero');
     const art = hero?.querySelector<HTMLElement>('.hero-art');
@@ -705,10 +701,9 @@ export function NebulaScene({ enabled = true }: { enabled?: boolean }) {
       glowTexture.dispose();
       streakTexture.dispose();
       renderer.dispose();
-      renderer.forceContextLoss();
       renderer.domElement.remove();
     };
-  }, [paused, coarse, enabled]);
+  }, []);
 
   return <div ref={hostRef} className="hero-nebula" aria-hidden="true" />;
 }
