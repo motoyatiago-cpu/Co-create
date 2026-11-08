@@ -66,6 +66,26 @@ test('减少动画、暂停漂浮与无横向溢出', async ({ page }) => {
   }
 });
 
+test('两款产品与四格故事均可进入完整体验', async ({ page, request }) => {
+  await page.goto('/#products');
+  await expect(page.getByRole('heading', { name: '回音结', level: 3 })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '把感受剪成片', level: 3 })).toBeVisible();
+
+  const experiences = [
+    { name: /打开回音结完整体验/, path: '/experiences/echo-knot/index.html' },
+    { name: /打开把感受剪成片完整体验/, path: '/experiences/feeling-film/index.html' },
+    { name: /打开完整四格时间线互动体验/, path: '/experiences/story/index.html' },
+  ];
+
+  for (const experience of experiences) {
+    await expect(page.getByRole('link', { name: experience.name })).toHaveAttribute('target', '_blank');
+    const response = await request.get(experience.path);
+    expect(response.ok()).toBe(true);
+  }
+
+  await expect(page.locator('.story-act')).toHaveCount(4);
+});
+
 test('45人容量、无重叠，每位成员均可找到并展开', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/tests/fixtures/capacity.html');

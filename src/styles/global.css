@@ -48,7 +48,7 @@ svg { flex-shrink: 0; }
 .module-slot { scroll-margin-top: 110px; padding: 62px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 220px 1fr; gap: 40px; }
 .module-slot .section-index { margin: 5px 0 0; }
 .slot-content h2 { font-size: clamp(24px, 2.5vw, 34px); }
-.slot-content p { color: var(--muted); margin-top: 16px; font-size: 15px; }
+.slot-content > p { color: var(--muted); margin-top: 16px; font-size: 15px; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 44px; font-family: var(--serif); }
 .site-footer p { font-size: 21px; }
 .site-footer span { display: block; font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 6px; }
