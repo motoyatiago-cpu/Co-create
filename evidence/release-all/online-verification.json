@@ -1,0 +1,35 @@
+{
+  "base": "https://beichen-group1-co-create.pages.dev",
+  "assetsVerified": 124,
+  "results": [
+    {
+      "device": "desktop",
+      "covers": true,
+      "contacts": 6,
+      "members": 32,
+      "gallery": 9,
+      "anonymousGallery": true,
+      "storyMaterials": 2,
+      "aiMode": true,
+      "localMode": true,
+      "onboarding": true,
+      "pageErrors": []
+    },
+    {
+      "device": "mobile",
+      "covers": true,
+      "contacts": 6,
+      "members": 32,
+      "gallery": 9,
+      "anonymousGallery": true,
+      "storyMaterials": 2,
+      "aiMode": true,
+      "localMode": true,
+      "onboarding": true,
+      "pageErrors": []
+    }
+  ],
+  "appCommit": "28d515c58631bee97eac77b2c5e72194e9ccfbed",
+  "deploymentId": "1bfaa31e-7efa-4761-8701-1249edfaf990",
+  "environment": "Production"
+}
