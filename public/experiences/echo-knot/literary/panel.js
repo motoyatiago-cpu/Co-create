@@ -1,4 +1,5 @@
 import { LiteraryController } from './controller.js';
+import './onboarding.js';
 import { validatePack } from './sessions.js';
 
 // The baseline router redirects encoded Chinese deep links to home on refresh.
