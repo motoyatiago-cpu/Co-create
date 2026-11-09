@@ -1,0 +1,52 @@
+[
+  {
+    "id": "qu_yuan",
+    "referenceHash": "c4b09685c8a3b5b265072c123cb62e06c702b9e95dcdbad96a52084cd18cc269",
+    "promptTraitsHash": "3a5dd3943e406df70c7d5ea5e1c452620f03b9113cecd791aed84397dafd7bf5"
+  },
+  {
+    "id": "li_qingzhao",
+    "referenceHash": "d24809237406defdc5c39590115212caef533f057888195fdc6d4ee132f14f8a",
+    "promptTraitsHash": "12668009014f64d65685112b33b76685d386ec735341ef86df5840e705af5ea9"
+  },
+  {
+    "id": "nalan_xingde",
+    "referenceHash": "38b97120ea9421f9e11e3885e2c0cf8a463f49222d1ec91da35d1eac66e0820f",
+    "promptTraitsHash": "628614450ca0dbfa6dfa6dfbe3fd0485e2e148677e3ba97f03e0e636e0f16c16"
+  },
+  {
+    "id": "li_bai",
+    "referenceHash": "a6e90dc06e635240bb9e937f3fe4011b3cb90de8d0dd34a265fb5f7d8c7bfb9a",
+    "promptTraitsHash": "1f26b96affec124757b3f2c8dc3559d5d4b9e0c5137775a9501fa7f902edc030"
+  },
+  {
+    "id": "su_shi",
+    "referenceHash": "47b2edaead479cf008903a2566f30c81f27da8eaa1fbe03029853bef59ccdf7c",
+    "promptTraitsHash": "2e31e6c21c54660ffca931a9d648bad7c3529a820540b52ea1615f377c87b06e"
+  },
+  {
+    "id": "xin_qiji",
+    "referenceHash": "aa4088d6ea9f6e3ca12b68a217cc5a09d6529106faec91fa3de10cb74f8af395",
+    "promptTraitsHash": "b70da9d798720928df28ae87085d7eab09117a75da9305bb560cb79883235f26"
+  },
+  {
+    "id": "wang_wei",
+    "referenceHash": "92e7fa1f971f23210d65b457f7dd59bac4ec4ce0403ae65a587b7dc685d40c07",
+    "promptTraitsHash": "bae27337ab8ea62d3beb4dcc94ce2a28f62b7d71701aac2e25c130ec6f57c08e"
+  },
+  {
+    "id": "du_fu",
+    "referenceHash": "26f9c6fb662c463686dc201fa72b744fa4021bd1ae3ee6f0fd2ef59a58ebd171",
+    "promptTraitsHash": "65d4f8200845c0730db58adab18d40de080c772b39c9cd9351590f8b02908589"
+  },
+  {
+    "id": "lu_xun",
+    "referenceHash": "6d70510af61eba6215ad5113dd4291dc4961a6569f36b07070adbaef8f74dfdc",
+    "promptTraitsHash": "694279f325e0ac3a6829dd6974074e44d351f1a634b8e6bd6060546c0bd4c596"
+  },
+  {
+    "id": "tao_yuanming",
+    "referenceHash": "cd7bb026b9059b9f8d2df979d7e9f5a7b88db713fa5791a186fcd00e8abb21b5",
+    "promptTraitsHash": "adfaf3f16ca532e51e4e09b817fd05efef23429f64cd101ba13bb7b84c9ef538"
+  }
+]

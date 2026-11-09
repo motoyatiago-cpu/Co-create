@@ -1,0 +1,343 @@
+{
+  "source": "1组正式组员情况.xlsx / 参会情况",
+  "sha256": "67b1de934789f94926242cd2a4ccb71ffeafd9cb12f1f1262625d6f654acd536",
+  "authorization": "User explicitly requested all filled Excel contacts be added to member cards; missing fields remain empty (2026-11-09)",
+  "rows": [
+    {
+      "memberId": "member-01",
+      "sourceRow": 3,
+      "sourceCells": [
+        "P3"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-02",
+      "sourceRow": 4,
+      "sourceCells": [
+        "P4"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-03",
+      "sourceRow": 5,
+      "sourceCells": [
+        "Q5"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-04",
+      "sourceRow": 6,
+      "sourceCells": [
+        "P6"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-05",
+      "sourceRow": 7,
+      "sourceCells": [
+        "P7"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-06",
+      "sourceRow": 8,
+      "sourceCells": [
+        "P8"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-07",
+      "sourceRow": 9,
+      "sourceCells": [
+        "P9"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-08",
+      "sourceRow": 10,
+      "sourceCells": [
+        "P10"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-09",
+      "sourceRow": 11,
+      "sourceCells": [
+        "P11"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-10",
+      "sourceRow": 12,
+      "sourceCells": [
+        "P12"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-11",
+      "sourceRow": 13,
+      "sourceCells": [
+        "P13"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "邮箱"
+      ]
+    },
+    {
+      "memberId": "member-12",
+      "sourceRow": 14,
+      "sourceCells": [
+        "P14"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-13",
+      "sourceRow": 15,
+      "sourceCells": [],
+      "excelContacts": 0,
+      "types": []
+    },
+    {
+      "memberId": "member-14",
+      "sourceRow": 16,
+      "sourceCells": [
+        "P16"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-15",
+      "sourceRow": 17,
+      "sourceCells": [],
+      "excelContacts": 0,
+      "types": []
+    },
+    {
+      "memberId": "member-16",
+      "sourceRow": 18,
+      "sourceCells": [
+        "P18"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "邮箱"
+      ]
+    },
+    {
+      "memberId": "member-17",
+      "sourceRow": 19,
+      "sourceCells": [
+        "P19"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-18",
+      "sourceRow": 20,
+      "sourceCells": [
+        "P20"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-19",
+      "sourceRow": 21,
+      "sourceCells": [
+        "P21"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-20",
+      "sourceRow": 22,
+      "sourceCells": [
+        "P22"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-21",
+      "sourceRow": 23,
+      "sourceCells": [
+        "P23"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-22",
+      "sourceRow": 24,
+      "sourceCells": [
+        "P24"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-23",
+      "sourceRow": 25,
+      "sourceCells": [],
+      "excelContacts": 0,
+      "types": []
+    },
+    {
+      "memberId": "member-24",
+      "sourceRow": 26,
+      "sourceCells": [
+        "P26"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "电话"
+      ]
+    },
+    {
+      "memberId": "member-25",
+      "sourceRow": 27,
+      "sourceCells": [
+        "P27"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-26",
+      "sourceRow": 28,
+      "sourceCells": [],
+      "excelContacts": 0,
+      "types": []
+    },
+    {
+      "memberId": "member-27",
+      "sourceRow": 29,
+      "sourceCells": [
+        "P29"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-28",
+      "sourceRow": 30,
+      "sourceCells": [
+        "P30"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    },
+    {
+      "memberId": "member-29",
+      "sourceRow": 31,
+      "sourceCells": [
+        "P31"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "微信"
+      ]
+    },
+    {
+      "memberId": "member-30",
+      "sourceRow": 32,
+      "sourceCells": [
+        "P32"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "邮箱"
+      ]
+    },
+    {
+      "memberId": "member-31",
+      "sourceRow": 33,
+      "sourceCells": [
+        "P33"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "邮箱"
+      ]
+    },
+    {
+      "memberId": "member-32",
+      "sourceRow": 34,
+      "sourceCells": [
+        "P34"
+      ],
+      "excelContacts": 1,
+      "types": [
+        "联系方式"
+      ]
+    }
+  ]
+}

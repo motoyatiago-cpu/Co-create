@@ -57,8 +57,13 @@
 .keyword-list { display: flex; gap: 8px; flex-wrap: wrap; margin-block: 18px 20px; }
 .keyword-list li { border-radius: 24px; padding: 3px 14px; background: #a98cf528; font-family: var(--serif); font-size: 16px; }
 .member-bio { font-family: var(--serif); font-size: 17px; line-height: 1.9; color: #3d3550; }
+.member-contact { margin-top: 20px; padding-top: 16px; border-top: 1px solid #131a3a25; }
+.member-contact h4 { font-family: var(--serif); font-size: 19px; }
+.member-contact a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; font-size: 14px; color: #4c3b69; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
 .member-card dt { font-family: var(--serif); font-size: 20px; font-weight: 600; margin-top: 22px; }
 .member-card dd { margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #4d455e; overflow-wrap: anywhere; }
+.member-card .member-contact dt { margin-top: 8px; font-family: var(--sans); font-size: 12px; color: #71677f; }
+.member-card .member-contact dd { margin-top: 0; font-size: 14px; }
 .card-end { margin-top: 30px; padding-top: 20px; border-top: 1px solid #131a3a25; color: #70596f; font-family: var(--serif); font-size: 14px; }
 @keyframes tile-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 @keyframes tile-in { from { opacity: 0; transform: translateY(22px) scale(.94); } to { opacity: 1; transform: none; } }

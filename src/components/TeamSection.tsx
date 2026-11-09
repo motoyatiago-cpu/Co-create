@@ -1,5 +1,6 @@
 import { copy } from '../data/copy';
 import { members } from '../data/members';
+import { presentedMembers } from '../data/memberPresentation';
 import { MemberWall } from './MemberWall';
 
 export function TeamSection() {
@@ -13,6 +14,6 @@ export function TeamSection() {
       <ul className="team-values" aria-label="成员眼中的第1组">{copy.team.keywords.map(word => <li key={word}>{word}</li>)}</ul>
     </div>
     <div className="wall-heading"><h3>{copy.team.wallTitle}</h3><p>{copy.team.wallHint}</p><p className="example-notice">{copy.team.avatarNotice} {notice}</p></div>
-    <MemberWall members={members} />
+    <MemberWall members={presentedMembers} />
   </div></section>;
 }

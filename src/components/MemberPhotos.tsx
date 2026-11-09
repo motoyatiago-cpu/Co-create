@@ -15,7 +15,7 @@ export function MemberPhotos({ memberId, images, expanded, onExpand }: {
   const image = images[index % images.length];
   const move = (direction: number) => { setIndex(value => (value + direction + images.length) % images.length); setFailed(false); };
   return <section className={`member-photos${expanded ? ' is-expanded' : ''}`} aria-label="个人图片画廊" data-member-id={memberId}>
-    <div className="member-photos__heading"><h4>生活里的小片段</h4><span>{images.some(item => item.reviewOnly) ? '本机候选素材 · 待公开确认' : '成员分享'}</span></div>
+    <div className="member-photos__heading"><h4>生活里的小片段</h4><span>成员分享</span></div>
     <figure onTouchStart={event => { touch.current = { x: event.touches[0].clientX, y: event.touches[0].clientY }; }} onTouchEnd={event => {
       if (!touch.current || !event.changedTouches.length) return;
       const dx = event.changedTouches[0].clientX - touch.current.x;

@@ -1,0 +1,63 @@
+{
+  "model": "deepseek-flash",
+  "successful": 40,
+  "failed": 1,
+  "ordinary": 36,
+  "ordinaryIdentityDisclosures": [],
+  "truthAnswers": [
+    {
+      "persona": "李白",
+      "clarified": true
+    },
+    {
+      "persona": "李清照",
+      "clarified": true
+    },
+    {
+      "persona": "鲁迅",
+      "clarified": true
+    },
+    {
+      "persona": "苏轼",
+      "clarified": true
+    }
+  ],
+  "perPersona": [
+    {
+      "name": "李白",
+      "successful": 10,
+      "questionEnding": 3,
+      "inputTokens": 10897,
+      "outputTokens": 1449
+    },
+    {
+      "name": "李清照",
+      "successful": 10,
+      "questionEnding": 2,
+      "inputTokens": 11261,
+      "outputTokens": 1441
+    },
+    {
+      "name": "鲁迅",
+      "successful": 10,
+      "questionEnding": 3,
+      "inputTokens": 10183,
+      "outputTokens": 1231
+    },
+    {
+      "name": "苏轼",
+      "successful": 10,
+      "questionEnding": 2,
+      "inputTokens": 10857,
+      "outputTokens": 1547
+    }
+  ],
+  "inputTokens": 43198,
+  "outputTokens": 5668,
+  "notes": [
+    "Token为服务商响应报告值；不是费用估计。未查询账单，不推断实际扣费。",
+    "elapsedMs含浏览器轮询和人工检查等待，不作为模型延迟基准；缺失值不补造。",
+    "首次鉴权失败后由用户重新填写Key，再显式重测；李白保留一条未获回复的你好。",
+    "旧版4次采样的Token另列before.json，不计入修复版40次成功调用总量。"
+  ]
+}

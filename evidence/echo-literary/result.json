@@ -1,0 +1,27 @@
+{
+  "baseline": "aa4aace",
+  "branch": "feature/echo-knot-literary-ai",
+  "nativeWorldBaseline": "0f05efb",
+  "nativeWorldMode": "read-only; no app, database or credentials opened",
+  "build": "passed",
+  "unitTests": {
+    "passed": 9
+  },
+  "browserTests": {
+    "passed": 30,
+    "production": 28,
+    "sourceCapacityFixture": 2
+  },
+  "viewports": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "personaCount": 10,
+  "personasCanonicalSha256": "9175ab2bfc1d33659054a31013cc1442554d2005272c1f94248d05f478d910fa",
+  "modelTesting": "mocked browser responses only; no paid API request",
+  "modelCost": 0,
+  "deployment": "not performed"
+}

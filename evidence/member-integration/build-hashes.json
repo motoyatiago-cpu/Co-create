@@ -1,0 +1,238 @@
+[
+  {
+    "file": "art/moon.webp",
+    "sha256": "6efd55ede19da17ea5137ee1e888acf27a649f1d43f3284883af158827b65d12"
+  },
+  {
+    "file": "art/nebula.webp",
+    "sha256": "fb8b75e6b3c4cf912be482743b1697071f6b99e23762c3aac269680fc1d4bea9"
+  },
+  {
+    "file": "assets/index-BG8flUEv.js",
+    "sha256": "dfc68f63f4c8d1740b4bdac809affa75d494a44a33973a62d60a802e9398887a"
+  },
+  {
+    "file": "assets/index-CHSDPurW.css",
+    "sha256": "794e6b3537dd3f99553927a2c01b0f11b9ea8f0df6d3297190b9a288b6da3bf6"
+  },
+  {
+    "file": "experiences/echo-knot/index.html",
+    "sha256": "f5a5bc899a93fa0ba029b21a5b8edded62a6679fe2f6944fe905081b95573e77"
+  },
+  {
+    "file": "experiences/echo-knot/literary/chat-completion.js",
+    "sha256": "93ce02501890d05d8c907d9a6093b56c0b5c2560f783166e3bd6dbef5b3c48e7"
+  },
+  {
+    "file": "experiences/echo-knot/literary/controller.js",
+    "sha256": "11d54f72726694e2ee2b04ac532fadb16b256e0d187a81ad55b598a1f85620e3"
+  },
+  {
+    "file": "experiences/echo-knot/literary/panel.css",
+    "sha256": "1178cc9f903379a31ba602c19442d3100d8d936d02ccbfc8a9c40ea133887607"
+  },
+  {
+    "file": "experiences/echo-knot/literary/panel.js",
+    "sha256": "984ec57ac55a73fe4b7d25eefd30af91b72fb165ee09266089d221cb8cc129d8"
+  },
+  {
+    "file": "experiences/echo-knot/literary/personas.json",
+    "sha256": "c541f523c84cdaab036b6b7321352823568622e78bde9454a5ac7eb7bfec624e"
+  },
+  {
+    "file": "experiences/echo-knot/literary/preferences.js",
+    "sha256": "18359d56e13df099384fce7757e1520eb492f081650d67f9d540a8f502813784"
+  },
+  {
+    "file": "experiences/echo-knot/literary/sessions.js",
+    "sha256": "d89937189d8f1e9f7ed127c739e8bebf18cc9f131b40e5bec10f5848f7d0c1e3"
+  },
+  {
+    "file": "experiences/feeling-film/css/style.css",
+    "sha256": "c2e759e7d3323c26f55da334656d3df1f45aa6be1890f7a273ebd1b505992509"
+  },
+  {
+    "file": "experiences/feeling-film/index.html",
+    "sha256": "4936314e1a7c63d6914c090355275c60087e27220bb29bb852752cab966db31d"
+  },
+  {
+    "file": "experiences/feeling-film/js/app.js",
+    "sha256": "153f5195389f357fb1dc5e21d6103eb3eb5f670d3a78e4522d28d37d67b128a2"
+  },
+  {
+    "file": "experiences/feeling-film/js/data.js",
+    "sha256": "2b716efcfcec4e98e1cd64c4006e90810d82eae0d5c12a3a9e05a2bde98704e4"
+  },
+  {
+    "file": "experiences/feeling-film/js/feelings.js",
+    "sha256": "fbd79974bd9f63b888061f33eb42337de8e7464d41798a4ac2727528f2940dd7"
+  },
+  {
+    "file": "experiences/feeling-film/js/film.js",
+    "sha256": "66d52d7e62913a6dde0ca5534afdf1aae330d115bb6c47dd5dfc0930e83f04e5"
+  },
+  {
+    "file": "experiences/feeling-film/js/gestures.js",
+    "sha256": "7dce3b0d3b7112981ed5281382d2294374fa1a4932fdc70ef7a7908bd2c3ad5b"
+  },
+  {
+    "file": "experiences/feeling-film/js/music.js",
+    "sha256": "5305d6003a5e02c18d111654bf8b5a4b1b4beb2d3cb85cd9841382ba86fb9de1"
+  },
+  {
+    "file": "experiences/feeling-film/js/scenes.js",
+    "sha256": "ebf1d1a3d9847d5c824169f37facd7b720ffca5dbaeb3827f73457093c188cd5"
+  },
+  {
+    "file": "experiences/feeling-film/js/store.js",
+    "sha256": "24a158723dae36ca8252236e8f66f202ea8d851bfa93e758394281aa1f641154"
+  },
+  {
+    "file": "experiences/feeling-film/js/util.js",
+    "sha256": "fda0d4001add32166791c89e734d10b5a9e153c8de022175cf52033f4dc0f931"
+  },
+  {
+    "file": "experiences/story/index.html",
+    "sha256": "b8288f91ba4d9d8be6041fef44885934db3fa976ecaeb7d2c1f7f00fcc41dfc9"
+  },
+  {
+    "file": "favicon.svg",
+    "sha256": "9947e73779cd6d7aeb07b040a909cd5198ae6b9e767005150bec77c673fd5cdd"
+  },
+  {
+    "file": "index.html",
+    "sha256": "5ea3325b655f86ed9a7160da1a7e09dff758a5ed870a079690e1e6c1b1dc7f8d"
+  },
+  {
+    "file": "team/avatars/manifest.json",
+    "sha256": "ed32a54d2b35547b0ac80875b4acd77b92c15fc6db625d1b29d8ad73e947c09c"
+  },
+  {
+    "file": "team/avatars/member-01.png",
+    "sha256": "7abeb87ebf3c7ef661df66c998642879cb5916a54955b47379087d967c83d853"
+  },
+  {
+    "file": "team/avatars/member-02.png",
+    "sha256": "ff86b5221214387b01e6896c74a164169fddcc0169aa374aa530d11cbb311c65"
+  },
+  {
+    "file": "team/avatars/member-03.png",
+    "sha256": "725d1c39f954bf1a1951025dd3ceb95e89c3c901c4859dccfba31534e01c2a99"
+  },
+  {
+    "file": "team/avatars/member-04.png",
+    "sha256": "dbc99bd314b22ae87494f4baac9f973c1ceb3f5295fa7f4d993c97f9872cb243"
+  },
+  {
+    "file": "team/avatars/member-05.png",
+    "sha256": "d2216e0138248f2017770b5d9e2c120283e18950db8b5ef75b9b4341ba2a903d"
+  },
+  {
+    "file": "team/avatars/member-06.png",
+    "sha256": "269f84b668ad07463689110e128d7d3b1dcf31bb8454fb24a38bb663e4bed765"
+  },
+  {
+    "file": "team/avatars/member-07.png",
+    "sha256": "eebac74870ad0274567cc510742cfd07a8fff9faf312126537906d62b51ec5f7"
+  },
+  {
+    "file": "team/avatars/member-08.png",
+    "sha256": "9ff939da0ffa0d8e9c30e3476d0b1402d570a3bc04087a4a249669003645e3a2"
+  },
+  {
+    "file": "team/avatars/member-09.png",
+    "sha256": "23788405b0c97134bb982892c71e821a66b6b29e463b2eaacc247ba3d0fb53fa"
+  },
+  {
+    "file": "team/avatars/member-10.png",
+    "sha256": "403a293c110988136eff048eedad5694b22b0be28bd93024db399b4a0e21fc7b"
+  },
+  {
+    "file": "team/avatars/member-11.png",
+    "sha256": "757eeedc6c7b9decb62028bf1f7e7704e72de159a9824b2d4b6b6c4134cf1138"
+  },
+  {
+    "file": "team/avatars/member-12.png",
+    "sha256": "93f6370843b4ddc27289717c6d97fd15b41b40fda3f9d93401f31a3e42d55d92"
+  },
+  {
+    "file": "team/avatars/member-13.png",
+    "sha256": "87fabc2306ec30310e28ac4ea7e59f7664005d441186b79a65951c5b8266c927"
+  },
+  {
+    "file": "team/avatars/member-14.png",
+    "sha256": "cb28810785a8c15e2dead3067d373155f66e2d6aff5103829c1e444398f74982"
+  },
+  {
+    "file": "team/avatars/member-15.png",
+    "sha256": "2c843b3eb287112b7b57599094891c10804ba4b31af86d27e036f91974b54647"
+  },
+  {
+    "file": "team/avatars/member-16.png",
+    "sha256": "ebc0a6176fbff55ea6278c0ccaba11fcb177c895e4cd68a07cb74369a8600c77"
+  },
+  {
+    "file": "team/avatars/member-17.png",
+    "sha256": "cdae1ce115f4789c4efe1b2aac20b5a9c102168233083ed25ad574e507ca2d10"
+  },
+  {
+    "file": "team/avatars/member-18.png",
+    "sha256": "d8bfe426d24ed77a9a734ebf4fe77535e1604caa3264a9999d3a054907ec648a"
+  },
+  {
+    "file": "team/avatars/member-19.png",
+    "sha256": "2ebca41601cfbd13afca6f42f835ee71678f4580e16cd6e1dd2bbaa9e81afd87"
+  },
+  {
+    "file": "team/avatars/member-20.png",
+    "sha256": "e3f8dbbc1d40ceda8aa9b61cf97170e86c1243b78589238d9b30691b0d6a5910"
+  },
+  {
+    "file": "team/avatars/member-21.png",
+    "sha256": "4fd1bfa8642d90a929a38b478f4461f14944b32dc516e3cda0016b6179bb7e0e"
+  },
+  {
+    "file": "team/avatars/member-22.png",
+    "sha256": "5153f3773641032d3e6fd9ce4e7e1942c64a293e08f7b4baea10c959657b0b7f"
+  },
+  {
+    "file": "team/avatars/member-23.png",
+    "sha256": "054f53e7a261f288450b6ec1851af40fb36265fbd1f0f01c43b62abf9c80a55f"
+  },
+  {
+    "file": "team/avatars/member-24.png",
+    "sha256": "5d12625a1302dc02abc2ab39fb2011c923723dfa41d2d9f639c893e171381896"
+  },
+  {
+    "file": "team/avatars/member-25.png",
+    "sha256": "609973535726920b603b9caa69be5f16c4b23e9bd5333cb8a6aab7be2561197d"
+  },
+  {
+    "file": "team/avatars/member-26.png",
+    "sha256": "759b89dc51b5b7e2c638139c41a082010e961536977424a5667142166be6217f"
+  },
+  {
+    "file": "team/avatars/member-27.png",
+    "sha256": "ea6bece1fae37f944f2275309684ed24f4dd4ce4897a25e431e8dd925fd12ce9"
+  },
+  {
+    "file": "team/avatars/member-28.png",
+    "sha256": "fe595cf0d642669e65685bca5dc3e72af3c8c18c782c45a6ad40f463fe9b2273"
+  },
+  {
+    "file": "team/avatars/member-29.png",
+    "sha256": "ed394eae481c2129bbb86126cc1be381379e0a49c98fb0cf6a2dfa1b2571fdba"
+  },
+  {
+    "file": "team/avatars/member-30.png",
+    "sha256": "ae7526e143ca3493d8d748efea0c435e9c6b1b44e1e14e9c6b4d4f43e45a6163"
+  },
+  {
+    "file": "team/avatars/member-31.png",
+    "sha256": "602fa32c39768c15dd9a719c10d2325dfba7fc25d29e8870300141a8336ff89b"
+  },
+  {
+    "file": "team/avatars/member-32.png",
+    "sha256": "a92a692d0cc9eb9801c0f997b1890c9e2a66e3165367fc9443cd6afefcc65bef"
+  }
+]

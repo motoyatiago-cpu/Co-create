@@ -18,6 +18,8 @@ test('32位成员的候选图库精确绑定，首图按需加载，多图切换
     if (!count) await expect(gallery).toHaveCount(0);
     else {
       await expect(gallery).toHaveAttribute('data-member-id', member.id);
+      await expect(gallery).not.toContainText('本机候选素材');
+      await expect(gallery).not.toContainText('待公开确认');
       await expect(gallery.locator('figcaption')).toHaveText(`1 / ${count}`);
       await expect(gallery.locator('img')).toHaveCount(1);
       await expect(gallery.locator('img')).toHaveJSProperty('complete', true);
@@ -71,6 +73,7 @@ test('共创材料克制展开，原四幕不变，风险素材不由审核服�
   await page.locator('.story-materials summary').click();
   await expect(page.locator('.story-materials img')).toHaveCount(2);
   await expect(page.locator('.story-materials')).toContainText('圆桌会构想，非全部已实装功能');
+  await expect(page.locator('.story-materials')).not.toContainText('本机候选素材');
   for (const file of ['co_create_discussion_record.webp','image4.jpeg','image38.jpeg','image44.jpeg','manifest.json']) {
     expect((await request.get(`/__local_review__/images/${file}`)).status()).toBe(404);
   }

@@ -1,0 +1,139 @@
+{
+  "screenshots": 8,
+  "contactViewportChecks": [
+    {
+      "device": "desktop",
+      "width": 320,
+      "scrollWidth": 320,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "width": 375,
+      "scrollWidth": 375,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "width": 390,
+      "scrollWidth": 390,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "width": 768,
+      "scrollWidth": 768,
+      "links": [
+        {
+          "left": 188,
+          "right": 387.703125
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "links": [
+        {
+          "left": 316,
+          "right": 515.703125
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "links": [
+        {
+          "left": 524,
+          "right": 723.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 320,
+      "scrollWidth": 320,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 375,
+      "scrollWidth": 375,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "scrollWidth": 390,
+      "links": [
+        {
+          "left": 48,
+          "right": 247.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 768,
+      "scrollWidth": 768,
+      "links": [
+        {
+          "left": 188,
+          "right": 387.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "links": [
+        {
+          "left": 316,
+          "right": 515.703125
+        }
+      ]
+    },
+    {
+      "device": "mobile",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "links": [
+        {
+          "left": 524,
+          "right": 723.703125
+        }
+      ]
+    }
+  ],
+  "aiPeople": 10,
+  "removedReviewBadge": true
+}
