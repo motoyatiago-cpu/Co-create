@@ -1,5 +1,6 @@
 import { Icon } from '../../components/Icon';
 import './story.css';
+import { StoryMaterials } from './StoryMaterials';
 
 const acts = [
   {
@@ -58,5 +59,6 @@ export function Story() {
         <Icon name="arrow" />
       </a>
     </div>
+    <StoryMaterials />
   </div>;
 }

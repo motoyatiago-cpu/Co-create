@@ -13,6 +13,8 @@ export interface Member {
   learning?: string;
   /** 只使用已获公开许可的头像，本地路径推荐放 public/team/avatars/。 */
   avatarUrl?: string;
+  /** 仅按已确认资料分配卡通形象，不推断真实外貌。 */
+  avatarGender?: 'male' | 'female';
   /** 只有本人/团队确认的组织角色才能填写。 */
   role?: { label: string; confirmed: true };
   isExample: boolean;

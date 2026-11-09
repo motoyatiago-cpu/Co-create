@@ -1,0 +1,20 @@
+{
+  "bytes": 26766304,
+  "type": "video/webm;codecs=vp9,opus",
+  "duration": 35.34,
+  "channels": 2,
+  "rms": 0.08900131170503649,
+  "peak": 0.36735236644744873,
+  "tracks": [
+    [
+      {
+        "kind": "audio",
+        "state": "live"
+      },
+      {
+        "kind": "video",
+        "state": "live"
+      }
+    ]
+  ]
+}

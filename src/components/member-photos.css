@@ -1,0 +1,15 @@
+.member-photos { border-top: 1px solid #131a3a25; margin-top: 24px; padding-top: 20px; min-width: 0; }
+.member-photos__heading { display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline; margin-bottom: 12px; }
+.member-photos h4 { font-family: var(--serif); font-size: 20px; }
+.member-photos__heading > span, .member-photos__controls > span { color: #71677f; font-size: 11px; }
+.member-photos figure { margin: 0; touch-action: pan-y; }
+.member-photos__image { padding: 0; display: grid; place-items: center; width: 100%; border: 1px solid #131a3a22; background: #e9dfd0; border-radius: 10px; overflow: hidden; min-height: 100px; cursor: zoom-in; }
+.member-photos__image img { width: 100%; height: min(280px, 45dvh); object-fit: contain; }
+.member-photos.is-expanded .member-photos__image img { height: min(70dvh, 720px); }
+.member-photos.is-expanded .member-photos__image { cursor: zoom-out; }
+.member-photos figcaption { text-align: center; margin-top: 8px; font-size: 12px; color: #71677f; }
+.member-photos__controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.member-photos__controls button { min-height: 44px; padding: 6px 12px; border: 1px solid #131a3a33; border-radius: 6px; }
+.member-card.with-photo-viewer { width: min(900px, calc(100vw - 32px)); }
+.photo-card-close { min-height: 44px; width: 100%; margin-top: 16px; border: 1px solid #131a3a33; border-radius: 6px; }
+@media(max-width: 480px) { .member-photos__controls > span { flex-basis: 100%; } }

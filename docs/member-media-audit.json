@@ -1,0 +1,570 @@
+[
+  {
+    "memberId": "member-01",
+    "displayName": "臧文琪",
+    "nickname": "文琪",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "开朗"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "reassigned-unused-compatible-avatar",
+    "avatarFile": "member-01.png",
+    "avatarSha256": "7abeb87ebf3c7ef661df66c998642879cb5916a54955b47379087d967c83d853",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-02",
+    "displayName": "陶露露",
+    "nickname": "莫惜春衣坐绿苔",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "折中",
+      "淡人"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-02.png",
+    "avatarSha256": "ff86b5221214387b01e6896c74a164169fddcc0169aa374aa530d11cbb311c65",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-03",
+    "displayName": "卢露萌",
+    "nickname": "噜噜 / Lumen",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "敏锐共情",
+      "有主见",
+      "外柔内刚"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-03.png",
+    "avatarSha256": "725d1c39f954bf1a1951025dd3ceb95e89c3c901c4859dccfba31534e01c2a99",
+    "candidatePhotos": 0,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-04",
+    "displayName": "许香怡",
+    "nickname": "kk",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "靠谱"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-04.png",
+    "avatarSha256": "dbc99bd314b22ae87494f4baac9f973c1ceb3f5295fa7f4d993c97f9872cb243",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-05",
+    "displayName": "刘艺莹",
+    "nickname": null,
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-05.png",
+    "avatarSha256": "d2216e0138248f2017770b5d9e2c120283e18950db8b5ef75b9b4341ba2a903d",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-06",
+    "displayName": "穆耶赛尔",
+    "nickname": null,
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "好奇",
+      "探索"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-06.png",
+    "avatarSha256": "269f84b668ad07463689110e128d7d3b1dcf31bb8454fb24a38bb663e4bed765",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-07",
+    "displayName": "姜羴",
+    "nickname": "三羊",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "稳",
+      "靠谱",
+      "冷静"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-07.png",
+    "avatarSha256": "eebac74870ad0274567cc510742cfd07a8fff9faf312126537906d62b51ec5f7",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-08",
+    "displayName": "冯丽娜",
+    "nickname": "Celia",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "游戏设计",
+      "叙事创作",
+      "AI 实验"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-08.png",
+    "avatarSha256": "9ff939da0ffa0d8e9c30e3476d0b1402d570a3bc04087a4a249669003645e3a2",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-09",
+    "displayName": "李佩员",
+    "nickname": "佩员",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "爱猫",
+      "行动派"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-09.png",
+    "avatarSha256": "23788405b0c97134bb982892c71e821a66b6b29e463b2eaacc247ba3d0fb53fa",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-10",
+    "displayName": "于幸繁",
+    "nickname": "Struggle.呆yu",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "死磕到底",
+      "坚持"
+    ],
+    "avatarGender": "male",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-10.png",
+    "avatarSha256": "403a293c110988136eff048eedad5694b22b0be28bd93024db399b4a0e21fc7b",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-11",
+    "displayName": "周雨涵",
+    "nickname": "麦旋风",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "天马行空",
+      "执行力",
+      "生命力"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-11.png",
+    "avatarSha256": "757eeedc6c7b9decb62028bf1f7e7704e72de159a9824b2d4b6b6c4134cf1138",
+    "candidatePhotos": 3,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-12",
+    "displayName": "钱韵秋",
+    "nickname": "线球",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "温和",
+      "多彩",
+      "责任感"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-12.png",
+    "avatarSha256": "93f6370843b4ddc27289717c6d97fd15b41b40fda3f9d93401f31a3e42d55d92",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-13",
+    "displayName": "邹昀彤",
+    "nickname": "壹玖",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "创意雷达",
+      "舆情雷达",
+      "省电模式"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-13.png",
+    "avatarSha256": "87fabc2306ec30310e28ac4ea7e59f7664005d441186b79a65951c5b8266c927",
+    "candidatePhotos": 5,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-14",
+    "displayName": "巩少菲",
+    "nickname": "菲菲",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "探索欲"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-14.png",
+    "avatarSha256": "cb28810785a8c15e2dead3067d373155f66e2d6aff5103829c1e444398f74982",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-15",
+    "displayName": "张书汇",
+    "nickname": "金雀",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "美食记录",
+      "北方视角",
+      "西安攻略"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-15.png",
+    "avatarSha256": "2c843b3eb287112b7b57599094891c10804ba4b31af86d27e036f91974b54647",
+    "candidatePhotos": 0,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-16",
+    "displayName": "陈佳",
+    "nickname": null,
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "自我观察员"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-16.png",
+    "avatarSha256": "ebc0a6176fbff55ea6278c0ccaba11fcb177c895e4cd68a07cb74369a8600c77",
+    "candidatePhotos": 3,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-17",
+    "displayName": "周缇",
+    "nickname": "呆呆鹅",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "理性"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-17.png",
+    "avatarSha256": "cdae1ce115f4789c4efe1b2aac20b5a9c102168233083ed25ad574e507ca2d10",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-18",
+    "displayName": "焦婷婷",
+    "nickname": "森岛屿夏",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "体验"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-18.png",
+    "avatarSha256": "d8bfe426d24ed77a9a734ebf4fe77535e1604caa3264a9999d3a054907ec648a",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-19",
+    "displayName": "霍俊文",
+    "nickname": "Cata（嘎达女士）",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "热忱",
+      "真诚",
+      "开朗"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-19.png",
+    "avatarSha256": "2ebca41601cfbd13afca6f42f835ee71678f4580e16cd6e1dd2bbaa9e81afd87",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-20",
+    "displayName": "刘颖洁",
+    "nickname": "Favour",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "开朗"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-20.png",
+    "avatarSha256": "e3f8dbbc1d40ceda8aa9b61cf97170e86c1243b78589238d9b30691b0d6a5910",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-21",
+    "displayName": "刘昱彤",
+    "nickname": "Briar",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "爱探索",
+      "想赚钱"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-21.png",
+    "avatarSha256": "4fd1bfa8642d90a929a38b478f4461f14944b32dc516e3cda0016b6179bb7e0e",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-22",
+    "displayName": "薛雨诺",
+    "nickname": "薛薛",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "乐于尝试"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-22.png",
+    "avatarSha256": "5153f3773641032d3e6fd9ce4e7e1942c64a293e08f7b4baea10c959657b0b7f",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-23",
+    "displayName": "王玥帆",
+    "nickname": "玙璠",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "绘画",
+      "贝斯",
+      "救助站义工"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "retained",
+    "avatarFile": "member-23.png",
+    "avatarSha256": "054f53e7a261f288450b6ec1851af40fb36265fbd1f0f01c43b62abf9c80a55f",
+    "candidatePhotos": 3,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-24",
+    "displayName": "张艺晴",
+    "nickname": "麓昕",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-24.png",
+    "avatarSha256": "5d12625a1302dc02abc2ab39fb2011c923723dfa41d2d9f639c893e171381896",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-25",
+    "displayName": "杨利",
+    "nickname": "YL",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "规则与反叛"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-25.png",
+    "avatarSha256": "609973535726920b603b9caa69be5f16c4b23e9bd5333cb8a6aab7be2561197d",
+    "candidatePhotos": 2,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-26",
+    "displayName": "李佳鑫",
+    "nickname": "夹心",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "爱唱歌"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-26.png",
+    "avatarSha256": "759b89dc51b5b7e2c638139c41a082010e961536977424a5667142166be6217f",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-27",
+    "displayName": "拼音",
+    "nickname": "拼音",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "多样"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-27.png",
+    "avatarSha256": "ea6bece1fae37f944f2275309684ed24f4dd4ce4897a25e431e8dd925fd12ce9",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-28",
+    "displayName": "胡洁",
+    "nickname": "Jessica",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "INFJ"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-28.png",
+    "avatarSha256": "fe595cf0d642669e65685bca5dc3e72af3c8c18c782c45a6ad40f463fe9b2273",
+    "candidatePhotos": 0,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-29",
+    "displayName": "李欣雅",
+    "nickname": null,
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "兴趣广泛",
+      "细节收藏",
+      "AI 探索中"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-29.png",
+    "avatarSha256": "ed394eae481c2129bbb86126cc1be381379e0a49c98fb0cf6a2dfa1b2571fdba",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-30",
+    "displayName": "张金诚",
+    "nickname": "JC",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "好奇心强",
+      "执行力",
+      "头脑风暴家"
+    ],
+    "avatarGender": "male",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-30.png",
+    "avatarSha256": "ae7526e143ca3493d8d748efea0c435e9c6b1b44e1e14e9c6b4d4f43e45a6163",
+    "candidatePhotos": 3,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-31",
+    "displayName": "余海燕",
+    "nickname": null,
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "生活艺术家"
+    ],
+    "avatarGender": "female",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-31.png",
+    "avatarSha256": "602fa32c39768c15dd9a719c10d2325dfba7fc25d29e8870300141a8336ff89b",
+    "candidatePhotos": 9,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  },
+  {
+    "memberId": "member-32",
+    "displayName": "张延博",
+    "nickname": "lutra",
+    "nicknameSource": "sanitized candidate manifest; confirmed empty retained",
+    "keywords": [
+      "ENFP",
+      "内容策划"
+    ],
+    "avatarGender": "male",
+    "genderSource": "user-confirmed: 10,30,32 male; all other members female",
+    "avatarAction": "generated-for-confirmed-gender",
+    "avatarFile": "member-32.png",
+    "avatarSha256": "a92a692d0cc9eb9801c0f997b1890c9e2a66e3165367fc9443cd6afefcc65bef",
+    "candidatePhotos": 1,
+    "publicPhotos": 0,
+    "photoApproval": "pending; local review only"
+  }
+]

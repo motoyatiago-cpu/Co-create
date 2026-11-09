@@ -1,377 +1,332 @@
 {
-  "description": "Team avatar portraits split from two sprite sheets",
-  "sourceSheets": [
-    {
-      "file": "4.webp",
-      "width": 1774,
-      "height": 887,
-      "figuresPerRow": [
-        6,
-        5
-      ]
-    },
-    {
-      "file": "5.webp",
-      "width": 1774,
-      "height": 887,
-      "figuresPerRow": [
-        6,
-        6
-      ]
-    }
+  "description": "32 generic 3D cartoon avatars; not real likenesses",
+  "genderConfirmation": "User: members 10, 30, 32 male; all other members female (2026-11-09)",
+  "size": [
+    512,
+    512
   ],
-  "background": "transparent",
-  "backgroundNote": "Source alpha channel was clean (no white halo); RGB is zeroed under transparent pixels.",
-  "avatarSize": 512,
-  "margin": "6% of the square side on each side",
-  "order": "source sheet 4 first, then sheet 5; left-to-right, top-to-bottom",
-  "notes": "Figures in each row touch slightly at hair/shoulders, so rows were split at the lowest-coverage (valley) column with a 1-px cut. Fragments belonging to neighbouring portraits at the cut edges were discarded. Sheet 4 bottom row has 5 figures spread across the full width.",
-  "total": 23,
+  "background": "transparent RGBA",
+  "originalBaseline": "aa4aace",
   "avatars": [
     {
-      "filename": "01.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 1,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 13,
-        "y": 36,
-        "width": 298,
-        "height": 390
-      }
+      "memberId": "member-01",
+      "file": "member-01.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "reassigned-unused-compatible-avatar",
+      "source": "aa4aace:public/team/avatars/10.png",
+      "sha256": "7abeb87ebf3c7ef661df66c998642879cb5916a54955b47379087d967c83d853",
+      "bytes": 259392
     },
     {
-      "filename": "02.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 2,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 312,
-        "y": 53,
-        "width": 286,
-        "height": 373
-      }
+      "memberId": "member-02",
+      "file": "member-02.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/02.png",
+      "sha256": "ff86b5221214387b01e6896c74a164169fddcc0169aa374aa530d11cbb311c65",
+      "bytes": 234456
     },
     {
-      "filename": "03.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 3,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 601,
-        "y": 37,
-        "width": 276,
-        "height": 389
-      }
+      "memberId": "member-03",
+      "file": "member-03.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-0731f15a-260e-478d-8091-e9b15d69e1fe.png",
+      "sha256": "725d1c39f954bf1a1951025dd3ceb95e89c3c901c4859dccfba31534e01c2a99",
+      "bytes": 283617
     },
     {
-      "filename": "04.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 4,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 878,
-        "y": 58,
-        "width": 327,
-        "height": 369
-      }
+      "memberId": "member-04",
+      "file": "member-04.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/04.png",
+      "sha256": "dbc99bd314b22ae87494f4baac9f973c1ceb3f5295fa7f4d993c97f9872cb243",
+      "bytes": 276596
     },
     {
-      "filename": "05.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 5,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1206,
-        "y": 43,
-        "width": 255,
-        "height": 383
-      }
+      "memberId": "member-05",
+      "file": "member-05.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-f785b0bd-a51d-45dd-97a6-11a848ceb28d.png",
+      "sha256": "d2216e0138248f2017770b5d9e2c120283e18950db8b5ef75b9b4341ba2a903d",
+      "bytes": 289991
     },
     {
-      "filename": "06.png",
-      "sourceSheet": "4.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 6,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1462,
-        "y": 42,
-        "width": 301,
-        "height": 384
-      }
+      "memberId": "member-06",
+      "file": "member-06.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/06.png",
+      "sha256": "269f84b668ad07463689110e128d7d3b1dcf31bb8454fb24a38bb663e4bed765",
+      "bytes": 229549
     },
     {
-      "filename": "07.png",
-      "sourceSheet": "4.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 1,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 24,
-        "y": 466,
-        "width": 377,
-        "height": 392
-      }
+      "memberId": "member-07",
+      "file": "member-07.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-890efeeb-5206-4cbd-aa08-8ff482eb5daa.png",
+      "sha256": "eebac74870ad0274567cc510742cfd07a8fff9faf312126537906d62b51ec5f7",
+      "bytes": 313619
     },
     {
-      "filename": "08.png",
-      "sourceSheet": "4.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 2,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 405,
-        "y": 466,
-        "width": 303,
-        "height": 392
-      }
+      "memberId": "member-08",
+      "file": "member-08.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/08.png",
+      "sha256": "9ff939da0ffa0d8e9c30e3476d0b1402d570a3bc04087a4a249669003645e3a2",
+      "bytes": 252347
     },
     {
-      "filename": "09.png",
-      "sourceSheet": "4.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 3,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 721,
-        "y": 456,
-        "width": 309,
-        "height": 402
-      }
+      "memberId": "member-09",
+      "file": "member-09.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-2bca9216-fc6a-444d-927c-51f9e3e82a40.png",
+      "sha256": "23788405b0c97134bb982892c71e821a66b6b29e463b2eaacc247ba3d0fb53fa",
+      "bytes": 283636
     },
     {
-      "filename": "10.png",
-      "sourceSheet": "4.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 4,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1040,
-        "y": 471,
-        "width": 340,
-        "height": 387
-      }
+      "memberId": "member-10",
+      "file": "member-10.png",
+      "gender": "male",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-0ad12e8b-ccb3-4b30-a4af-51f56eec026a.png",
+      "sha256": "403a293c110988136eff048eedad5694b22b0be28bd93024db399b4a0e21fc7b",
+      "bytes": 252162
     },
     {
-      "filename": "11.png",
-      "sourceSheet": "4.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 5,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1393,
-        "y": 453,
-        "width": 369,
-        "height": 405
-      }
+      "memberId": "member-11",
+      "file": "member-11.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-064d0f49-d81e-454a-8a18-60399ed3aeca.png",
+      "sha256": "757eeedc6c7b9decb62028bf1f7e7704e72de159a9824b2d4b6b6c4134cf1138",
+      "bytes": 287758
     },
     {
-      "filename": "12.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 1,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 22,
-        "y": 36,
-        "width": 301,
-        "height": 396
-      }
+      "memberId": "member-12",
+      "file": "member-12.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-2c144052-10b1-4eb5-85d9-04ee6bf66984.png",
+      "sha256": "93f6370843b4ddc27289717c6d97fd15b41b40fda3f9d93401f31a3e42d55d92",
+      "bytes": 282623
     },
     {
-      "filename": "13.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 2,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 324,
-        "y": 64,
-        "width": 307,
-        "height": 368
-      }
+      "memberId": "member-13",
+      "file": "member-13.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/13.png",
+      "sha256": "87fabc2306ec30310e28ac4ea7e59f7664005d441186b79a65951c5b8266c927",
+      "bytes": 254993
     },
     {
-      "filename": "14.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 3,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 633,
-        "y": 48,
-        "width": 276,
-        "height": 384
-      }
+      "memberId": "member-14",
+      "file": "member-14.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-78a05bac-c51a-4208-9607-a8dfe7f6f8d3.png",
+      "sha256": "cb28810785a8c15e2dead3067d373155f66e2d6aff5103829c1e444398f74982",
+      "bytes": 322256
     },
     {
-      "filename": "15.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 4,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 910,
-        "y": 38,
-        "width": 266,
-        "height": 395
-      }
+      "memberId": "member-15",
+      "file": "member-15.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/15.png",
+      "sha256": "2c843b3eb287112b7b57599094891c10804ba4b31af86d27e036f91974b54647",
+      "bytes": 212957
     },
     {
-      "filename": "16.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 5,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1177,
-        "y": 36,
-        "width": 266,
-        "height": 396
-      }
+      "memberId": "member-16",
+      "file": "member-16.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-cd41c7aa-cc9f-4c68-8be3-9629801a30a2.png",
+      "sha256": "ebc0a6176fbff55ea6278c0ccaba11fcb177c895e4cd68a07cb74369a8600c77",
+      "bytes": 242521
     },
     {
-      "filename": "17.png",
-      "sourceSheet": "5.webp",
-      "row": 1,
-      "rowPosition": "top",
-      "column": 6,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1444,
-        "y": 47,
-        "width": 321,
-        "height": 384
-      }
+      "memberId": "member-17",
+      "file": "member-17.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/17.png",
+      "sha256": "cdae1ce115f4789c4efe1b2aac20b5a9c102168233083ed25ad574e507ca2d10",
+      "bytes": 234796
     },
     {
-      "filename": "18.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 1,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 10,
-        "y": 454,
-        "width": 292,
-        "height": 397
-      }
+      "memberId": "member-18",
+      "file": "member-18.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-e4b7a288-3329-434f-ac5e-c99f43753740.png",
+      "sha256": "d8bfe426d24ed77a9a734ebf4fe77535e1604caa3264a9999d3a054907ec648a",
+      "bytes": 269790
     },
     {
-      "filename": "19.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 2,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 303,
-        "y": 458,
-        "width": 296,
-        "height": 393
-      }
+      "memberId": "member-19",
+      "file": "member-19.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/19.png",
+      "sha256": "2ebca41601cfbd13afca6f42f835ee71678f4580e16cd6e1dd2bbaa9e81afd87",
+      "bytes": 235589
     },
     {
-      "filename": "20.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 3,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 602,
-        "y": 460,
-        "width": 282,
-        "height": 391
-      }
+      "memberId": "member-20",
+      "file": "member-20.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-5e69849c-384b-441f-a5a3-1681f2ba7d48.png",
+      "sha256": "e3f8dbbc1d40ceda8aa9b61cf97170e86c1243b78589238d9b30691b0d6a5910",
+      "bytes": 304419
     },
     {
-      "filename": "21.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 4,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 889,
-        "y": 469,
-        "width": 295,
-        "height": 382
-      }
+      "memberId": "member-21",
+      "file": "member-21.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/21.png",
+      "sha256": "4fd1bfa8642d90a929a38b478f4461f14944b32dc516e3cda0016b6179bb7e0e",
+      "bytes": 250181
     },
     {
-      "filename": "22.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 5,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1188,
-        "y": 453,
-        "width": 271,
-        "height": 398
-      }
+      "memberId": "member-22",
+      "file": "member-22.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-75e1ba7e-75ef-4b9f-b95f-0980dc305d0e.png",
+      "sha256": "5153f3773641032d3e6fd9ce4e7e1942c64a293e08f7b4baea10c959657b0b7f",
+      "bytes": 275390
     },
     {
-      "filename": "23.png",
-      "sourceSheet": "5.webp",
-      "row": 2,
-      "rowPosition": "bottom",
-      "column": 6,
-      "width": 512,
-      "height": 512,
-      "sourceBounds": {
-        "x": 1473,
-        "y": 454,
-        "width": 282,
-        "height": 397
-      }
+      "memberId": "member-23",
+      "file": "member-23.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "retained",
+      "source": "aa4aace:public/team/avatars/23.png",
+      "sha256": "054f53e7a261f288450b6ec1851af40fb36265fbd1f0f01c43b62abf9c80a55f",
+      "bytes": 229111
+    },
+    {
+      "memberId": "member-24",
+      "file": "member-24.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-6b21d142-1c9b-481c-8d56-5289867acb86.png",
+      "sha256": "5d12625a1302dc02abc2ab39fb2011c923723dfa41d2d9f639c893e171381896",
+      "bytes": 297864
+    },
+    {
+      "memberId": "member-25",
+      "file": "member-25.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-910e1182-1b5a-437a-b100-217fbb005255.png",
+      "sha256": "609973535726920b603b9caa69be5f16c4b23e9bd5333cb8a6aab7be2561197d",
+      "bytes": 335218
+    },
+    {
+      "memberId": "member-26",
+      "file": "member-26.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-baf0cfe3-842e-4d4c-bd96-4014ea9e7fab.png",
+      "sha256": "759b89dc51b5b7e2c638139c41a082010e961536977424a5667142166be6217f",
+      "bytes": 284320
+    },
+    {
+      "memberId": "member-27",
+      "file": "member-27.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-77f5ea60-dc40-44c0-8946-2ce98a9bd7e6.png",
+      "sha256": "ea6bece1fae37f944f2275309684ed24f4dd4ce4897a25e431e8dd925fd12ce9",
+      "bytes": 286928
+    },
+    {
+      "memberId": "member-28",
+      "file": "member-28.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-e43d1636-7e88-48bc-9c97-79fa1659097e.png",
+      "sha256": "fe595cf0d642669e65685bca5dc3e72af3c8c18c782c45a6ad40f463fe9b2273",
+      "bytes": 297736
+    },
+    {
+      "memberId": "member-29",
+      "file": "member-29.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-1d841040-7b4d-4ce1-9bba-e7a37a898122.png",
+      "sha256": "ed394eae481c2129bbb86126cc1be381379e0a49c98fb0cf6a2dfa1b2571fdba",
+      "bytes": 342553
+    },
+    {
+      "memberId": "member-30",
+      "file": "member-30.png",
+      "gender": "male",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-aa45c31d-588d-49d9-93c8-10ceab20f0d3.png",
+      "sha256": "ae7526e143ca3493d8d748efea0c435e9c6b1b44e1e14e9c6b4d4f43e45a6163",
+      "bytes": 247247
+    },
+    {
+      "memberId": "member-31",
+      "file": "member-31.png",
+      "gender": "female",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-7b15e913-88a1-4109-8ece-dd086dd11487.png",
+      "sha256": "602fa32c39768c15dd9a719c10d2325dfba7fc25d29e8870300141a8336ff89b",
+      "bytes": 284291
+    },
+    {
+      "memberId": "member-32",
+      "file": "member-32.png",
+      "gender": "male",
+      "genderSource": "user-confirmed-2026-11-09",
+      "action": "generated-for-confirmed-gender",
+      "source": "exec-4efa3b6d-fc9c-4b5a-a347-263151cc9bd5.png",
+      "sha256": "a92a692d0cc9eb9801c0f997b1890c9e2a66e3165367fc9443cd6afefcc65bef",
+      "bytes": 238287
     }
   ]
 }

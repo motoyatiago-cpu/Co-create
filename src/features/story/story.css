@@ -33,3 +33,10 @@
   .story-timeline__footer { align-items: stretch; flex-direction: column; padding: 22px; }
   .story-timeline__link { width: 100%; }
 }
+.story-materials { margin-top: 24px; padding-top: 18px; border-top: 1px solid #9ba3c944; }
+.story-materials summary { min-height: 44px; cursor: pointer; font-family: var(--serif); font-size: 22px; }
+.story-materials > p { margin: 10px 0; color: var(--muted); font-size: 14px; }
+.story-materials > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+.story-materials figure { margin: 0; min-width: 0; }
+.story-materials img { width: 100%; height: 220px; object-fit: contain; border: 1px solid #9ba3c933; border-radius: 8px; }
+.story-materials figcaption { font-size: 12px; line-height: 1.8; color: var(--muted); }

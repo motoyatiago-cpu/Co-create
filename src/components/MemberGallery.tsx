@@ -51,8 +51,10 @@ function buildCard(member: Member, index: number, onOpen: (member: Member, trigg
 
   if (member.avatarUrl) {
     const image = document.createElement('img');
-    image.src = member.avatarUrl;
+    image.dataset.avatarSrc = member.avatarUrl;
     image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
     image.draggable = false;
     image.addEventListener('error', () => { image.remove(); portrait.append(initial()); }, { once: true });
     portrait.append(image);
@@ -64,8 +66,10 @@ function buildCard(member: Member, index: number, onOpen: (member: Member, trigg
   name.className = 'member-tile__name';
   name.textContent = member.name;
   const caption = document.createElement('span');
-  caption.className = 'member-tile__nickname';
-  caption.textContent = member.nickname ?? member.keywords[0] ?? '第1组';
+  caption.className = member.nickname ? 'member-tile__nickname' : 'member-tile__tag';
+  caption.dataset.kind = member.nickname ? 'nickname' : 'keyword';
+  caption.textContent = member.nickname ?? member.keywords[0] ?? '';
+  caption.hidden = !caption.textContent;
   inner.append(portrait, name, caption);
   float.append(inner);
   root.append(float);
@@ -166,8 +170,28 @@ export function MemberGallery({ members, visible, paused, onOpen }: {
     observer.observe(host);
     layout();
 
+    // Native image lazy-loading can fetch the whole long 3D wall in advance.
+    // Keep the PNGs deferred until their actual card approaches the viewport.
+    const loadPortrait = (root: Element) => {
+      const image = root.querySelector<HTMLImageElement>('img[data-avatar-src]');
+      if (!image) return;
+      image.src = image.dataset.avatarSrc!;
+      delete image.dataset.avatarSrc;
+    };
+    const portraits = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(changes => {
+      for (const change of changes) if (change.isIntersecting) {
+        loadPortrait(change.target);
+        portraits?.unobserve(change.target);
+      }
+    }, { rootMargin: '240px 0px' });
+    for (const { root } of entries.values()) {
+      if (portraits) portraits.observe(root);
+      else loadPortrait(root);
+    }
+
     return () => {
       observer.disconnect();
+      portraits?.disconnect();
       cancelAnimationFrame(frame);
       stateRef.current = null;
       entries.clear();

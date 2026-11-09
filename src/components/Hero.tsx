@@ -12,7 +12,6 @@ export function Hero() {
           <h1 id="home-heading">{copy.titleLines.map((line, i) => <span key={line} className={i === 2 ? 'accent' : undefined}>{line}</span>)}</h1>
           <p className="hero-subtitle">{copy.subtitle}</p>
           <p className="hero-description">{copy.description}</p>
-          <p className="draft-note">{copy.draftNote}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#team">{copy.enterLabel}<Icon name="arrow" /></a>
             <a className="text-link" href="#products">{copy.productsLabel}</a>

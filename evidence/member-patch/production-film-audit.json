@@ -1,0 +1,160 @@
+[
+  {
+    "mode": "mobile",
+    "checks": [
+      {
+        "page": "home",
+        "width": 320,
+        "inner": 320,
+        "scroll": 320,
+        "client": 320
+      },
+      {
+        "page": "home",
+        "width": 375,
+        "inner": 375,
+        "scroll": 375,
+        "client": 375
+      },
+      {
+        "page": "home",
+        "width": 390,
+        "inner": 390,
+        "scroll": 390,
+        "client": 390
+      },
+      {
+        "page": "home",
+        "width": 768,
+        "inner": 768,
+        "scroll": 768,
+        "client": 768
+      },
+      {
+        "page": "player",
+        "width": 390,
+        "inner": 390,
+        "scroll": 390,
+        "client": 390
+      }
+    ],
+    "before": {
+      "rms": 0,
+      "peak": 0,
+      "dbfs": null,
+      "contexts": []
+    },
+    "playing": {
+      "rms": 0.11463416786333282,
+      "peak": 0.3007422089576721,
+      "dbfs": -18.813718344957135,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 4.472
+        }
+      ]
+    },
+    "muted": {
+      "rms": 0.0000015271051371428253,
+      "peak": 0.000016927629985730164,
+      "dbfs": -116.32262123779581,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 5.992
+        }
+      ]
+    },
+    "unmuted": {
+      "rms": 0.09784883703951826,
+      "peak": 0.3160805404186249,
+      "dbfs": -20.18888663370597,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 7.232
+        }
+      ]
+    },
+    "audioTracks": [
+      {
+        "kind": "audio",
+        "state": "live"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "mode": "desktop",
+    "checks": [
+      {
+        "page": "home",
+        "width": 1024,
+        "inner": 1024,
+        "scroll": 1024,
+        "client": 1024
+      },
+      {
+        "page": "home",
+        "width": 1440,
+        "inner": 1440,
+        "scroll": 1440,
+        "client": 1440
+      },
+      {
+        "page": "player",
+        "width": 1440,
+        "inner": 1440,
+        "scroll": 1440,
+        "client": 1440
+      }
+    ],
+    "before": {
+      "rms": 0,
+      "peak": 0,
+      "dbfs": null,
+      "contexts": []
+    },
+    "playing": {
+      "rms": 0.11427098730074109,
+      "peak": 0.29674798250198364,
+      "dbfs": -18.841280406021937,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 4.472
+        }
+      ]
+    },
+    "muted": {
+      "rms": 0.0000013932500221481052,
+      "peak": 0.000018170627299696207,
+      "dbfs": -117.11941882735809,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 5.912
+        }
+      ]
+    },
+    "unmuted": {
+      "rms": 0.10100299999020067,
+      "peak": 0.31666702032089233,
+      "dbfs": -19.91331453229949,
+      "contexts": [
+        {
+          "state": "running",
+          "time": 7.152
+        }
+      ]
+    },
+    "audioTracks": [
+      {
+        "kind": "audio",
+        "state": "live"
+      }
+    ],
+    "errors": []
+  }
+]

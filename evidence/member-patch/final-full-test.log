@@ -1,0 +1,86 @@
+
+> group-one-studio@0.1.0 test:patch
+> npm run build && playwright test -c playwright.patch.config.ts
+
+
+> group-one-studio@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 44 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.72 kB │ gzip:   0.50 kB
+dist/assets/index-BJvAim9F.css   28.26 kB │ gzip:   7.01 kB
+dist/assets/index-CB0dck7a.js   814.21 kB │ gzip: 221.74 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 264ms
+[WebServer] (node:48068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:42952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 2 workers
+
+(node:29832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › tests\audio.spec.ts:41:1 › 无音频API时故事不会显示声音已开 (1.2s)
+  ok  2 [desktop] › tests\audio.spec.ts:27:1 › 故事实际开声、刷新恢复、静音和再开声，电平足够且无削波 (10.3s)
+  ok  4 [desktop] › tests\member-patch.spec.ts:6:1 › 长成员墙只加载临近视口头像，搜索和滚动仍能加载后段成员 (988ms)
+  ok  5 [desktop] › tests\member-patch.spec.ts:21:1 › 生产32张卡昵称与关键词分开、32头像一致、匿名与正式资料完整 (3.6s)
+  ok  6 [desktop] › tests\member-patch.spec.ts:43:1 › 生产产物没有候选个人图片、工作簿、审核接口及未审批截图 (572ms)
+  ok  7 [desktop] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.1s)
+  ok  8 [desktop] › tests\site.spec.ts:32:1 › 搜索、打开、关闭、Escape与键盘焦点恢复 (1.8s)
+  ok  9 [desktop] › tests\site.spec.ts:62:1 › 减少动画、暂停漂浮与无横向溢出 (2.0s)
+  ok 10 [desktop] › tests\site.spec.ts:78:1 › 两款产品与四格故事均可进入完整体验 (1.0s)
+  ok 11 [desktop] › tests\yu-source.spec.ts:5:1 › 源码包32位成员均可搜索并展开原始名片 (3.5s)
+  ok 12 [desktop] › tests\yu-source.spec.ts:22:1 › 五位联系卡片顺序与32人墙在五种宽度正常 (988ms)
+  ok 13 [desktop] › tests\yu-source.spec.ts:43:1 › 保留原首页文字入场、流光和立体名片漂浮，减少动画可关闭 (1.7s)
+(node:45868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [desktop] › tests\audio.spec.ts:47:1 › 剪片所有情绪均有适度音量，静音恢复与导出音轨正常 (28.6s)
+(node:13412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 15 [desktop-review] › tests\member-review.spec.ts:38:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (2.4s)
+  ok 16 [desktop-review] › tests\member-review.spec.ts:69:1 › 共创材料克制展开，原四幕不变，风险素材不由审核服务提供 (2.0s)
+(node:26468) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 14 [desktop-review] › tests\member-review.spec.ts:6:1 › 32位成员的候选图库精确绑定，首图按需加载，多图切换与焦点恢复 (8.1s)
+(node:27448) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [desktop-capacity] › tests\site.spec.ts:103:1 › 45人容量、每张名片可点击，每位成员均可找到并展开 (4.8s)
+(node:26068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 19 [mobile] › tests\audio.spec.ts:41:1 › 无音频API时故事不会显示声音已开 (1.1s)
+  ok 18 [mobile] › tests\audio.spec.ts:27:1 › 故事实际开声、刷新恢复、静音和再开声，电平足够且无削波 (10.1s)
+  ok 21 [mobile] › tests\member-patch.spec.ts:6:1 › 长成员墙只加载临近视口头像，搜索和滚动仍能加载后段成员 (1.1s)
+  ok 22 [mobile] › tests\member-patch.spec.ts:21:1 › 生产32张卡昵称与关键词分开、32头像一致、匿名与正式资料完整 (4.1s)
+  ok 23 [mobile] › tests\member-patch.spec.ts:43:1 › 生产产物没有候选个人图片、工作簿、审核接口及未审批截图 (637ms)
+  ok 24 [mobile] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.2s)
+  ok 25 [mobile] › tests\site.spec.ts:32:1 › 搜索、打开、关闭、Escape与键盘焦点恢复 (1.9s)
+  ok 26 [mobile] › tests\site.spec.ts:62:1 › 减少动画、暂停漂浮与无横向溢出 (2.0s)
+  ok 27 [mobile] › tests\site.spec.ts:78:1 › 两款产品与四格故事均可进入完整体验 (746ms)
+  ok 28 [mobile] › tests\yu-source.spec.ts:5:1 › 源码包32位成员均可搜索并展开原始名片 (3.6s)
+  ok 29 [mobile] › tests\yu-source.spec.ts:22:1 › 五位联系卡片顺序与32人墙在五种宽度正常 (1.1s)
+  ok 30 [mobile] › tests\yu-source.spec.ts:43:1 › 保留原首页文字入场、流光和立体名片漂浮，减少动画可关闭 (1.6s)
+(node:16980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [mobile] › tests\audio.spec.ts:47:1 › 剪片所有情绪均有适度音量，静音恢复与导出音轨正常 (28.5s)
+(node:48528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 32 [mobile-review] › tests\member-review.spec.ts:38:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (2.5s)
+  ok 33 [mobile-review] › tests\member-review.spec.ts:69:1 › 共创材料克制展开，原四幕不变，风险素材不由审核服务提供 (1.7s)
+  ok 31 [mobile-review] › tests\member-review.spec.ts:6:1 › 32位成员的候选图库精确绑定，首图按需加载，多图切换与焦点恢复 (8.3s)
+(node:23280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 34 [mobile-capacity] › tests\site.spec.ts:103:1 › 45人容量、每张名片可点击，每位成员均可找到并展开 (4.6s)
+
+  34 passed (1.4m)

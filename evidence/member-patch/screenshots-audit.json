@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "version": "before",
+      "device": "desktop",
+      "section": "home",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 0
+    },
+    {
+      "version": "before",
+      "device": "desktop",
+      "section": "team",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "desktop",
+      "section": "products",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "desktop",
+      "section": "story",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "desktop",
+      "section": "contact",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "desktop",
+      "section": "home",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 0
+    },
+    {
+      "version": "after",
+      "device": "desktop",
+      "section": "team",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "desktop",
+      "section": "products",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "desktop",
+      "section": "story",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "desktop",
+      "section": "contact",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "mobile",
+      "section": "home",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 0
+    },
+    {
+      "version": "before",
+      "device": "mobile",
+      "section": "team",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "mobile",
+      "section": "products",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "mobile",
+      "section": "story",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "before",
+      "device": "mobile",
+      "section": "contact",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "mobile",
+      "section": "home",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 0
+    },
+    {
+      "version": "after",
+      "device": "mobile",
+      "section": "team",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "mobile",
+      "section": "products",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "mobile",
+      "section": "story",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    },
+    {
+      "version": "after",
+      "device": "mobile",
+      "section": "contact",
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": 32
+    }
+  ],
+  "avatarRequests": {
+    "home": [],
+    "firstTeamViewport": [
+      "member-01.png",
+      "member-02.png",
+      "member-03.png"
+    ]
+  },
+  "screenshots": 24
+}

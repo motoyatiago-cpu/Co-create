@@ -5,7 +5,6 @@ export const copy = {
   titleLines: ['最正经的 1 组，', '收留最“不靠谱”的', '脑洞。'],
   subtitle: '真正存在的是我们，产品嘛，先别问。',
   description: '一群真实的人，两款虚构的AI概念产品。',
-  draftNote: '工作室名称与口号暂定',
   enterLabel: '进入工作室',
   productsLabel: '看看我们的脑洞',
   alternativeSlogan: '让每一个脑洞，都能找到回声。',
