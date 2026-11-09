@@ -1,5 +1,7 @@
 # 成员资料、头像与图库补丁交付
 
+> 后续更新：用户已批准整合上线全部本地已实现功能与图片；本报告保留阶段记录，当前状态见 [本轮整合报告](RELEASE_ALL_LOCAL_20261109.md) 和 [正式部署记录](CLOUDFLARE_DEPLOYMENT.md)。
+
 > 本文记录最初分阶段补丁。后续已按用户要求合入AI、调整展示顺序，并从新提供的原Excel补齐联系方式；当前结果见 [合并验收报告](MERGED_MEMBERS_AI_20261109.md)。
 
 隔离分支：`feature/celia-members-gallery-review`。基线：正式分支 `feature/celia-home-team` 的 `aa4aace`。本轮不合并 main，不运行 Cloudflare Production 发布，不恢复已归档 V1.2。正式分支及《回音结》AI 文学回声的独立分支保持原状。

@@ -1,5 +1,7 @@
 # 双产品IP封面正式集成 · 隔离验收
 
+> 后续更新：用户已批准整合上线全部本地已实现功能与图片；本报告保留阶段记录，当前状态见 [本轮整合报告](RELEASE_ALL_LOCAL_20261109.md) 和 [正式部署记录](CLOUDFLARE_DEPLOYMENT.md)。
+
 分支：`feature/celia-product-ip-integration`，基于当前发布分支 `199cb04`。本轮仅接入获准的四张响应式资产，未重新生图、未修改IP、未发布Cloudflare Production，也未合并正式分支。
 
 ## 改动

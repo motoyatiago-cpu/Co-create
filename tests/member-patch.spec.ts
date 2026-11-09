@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { members } from '../src/data/members';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { approvedMemberGalleries } from '../src/data/memberGalleries';
 
 test('长成员墙只加载临近视口头像，搜索和滚动仍能加载后段成员', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -31,7 +32,7 @@ test('生产32张卡昵称与关键词分开、32头像一致、匿名与正式�
     if (!member.nickname) await expect(tile.locator('[data-kind="nickname"]')).toHaveCount(0);
     await tile.click();
     if (!member.nickname || member.nickname === member.name) await expect(page.locator('.member-nickname')).toHaveCount(0);
-    await expect(page.getByRole('region', { name: '个人图片画廊', exact: true })).toHaveCount(0);
+    await expect(page.getByRole('region', { name: '个人图片画廊', exact: true })).toHaveCount(approvedMemberGalleries[member.id]?.length ? 1 : 0);
     await expect(page.locator('.member-avatar img')).toHaveJSProperty('naturalWidth', 512);
     await page.keyboard.press('Escape'); await expect(tile).toBeFocused();
   }
@@ -40,7 +41,7 @@ test('生产32张卡昵称与关键词分开、32头像一致、匿名与正式�
   expect(members.every(member => !member.isExample)).toBe(true);
 });
 
-test('生产产物没有候选个人图片、工作簿、审核接口及未审批截图', async ({ page, request }) => {
+test('生产仅包含获准图片，排除工作簿、审核接口及风险截图', async ({ page, request }) => {
   const files: string[] = [];
   const walk = (dir: string) => { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = join(dir, entry.name); if (entry.isDirectory()) walk(path); else files.push(path); } };
   walk('dist');
@@ -48,6 +49,9 @@ test('生产产物没有候选个人图片、工作簿、审核接口及未审�
   const main = files.filter(path => /assets.*\.js$/.test(path)).map(path => readFileSync(path,'utf8')).join('');
   expect(main).not.toContain('/__local_review__/');
   expect(main).not.toContain('co_create_discussion_record.webp');
-  await page.goto('/#story'); await expect(page.locator('.story-materials')).toHaveCount(0);
+  expect(files.filter(path => /team[\\/]gallery[\\/].*\.webp$/.test(path))).toHaveLength(55);
+  expect(files.filter(path => /story[\\/]materials[\\/].*\.webp$/.test(path))).toHaveLength(2);
+  await page.goto('/#story'); await expect(page.locator('.story-materials')).toHaveCount(1);
+  await page.locator('.story-materials summary').click();await expect(page.locator('.story-materials img')).toHaveCount(2);
   expect((await request.get('/__local_review__/images/member-01-01.webp')).headers()['content-type']).not.toContain('image/');
 });

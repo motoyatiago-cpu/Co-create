@@ -4,7 +4,7 @@ export default defineConfig({
   ...baseline,
   use: { ...baseline.use, baseURL: 'http://127.0.0.1:4192' },
   projects: baseline.projects!.flatMap(project => [
-    { ...project, testIgnore: '**/member-review.spec.ts', grepInvert: /45人容量/ },
+    { ...project, grepInvert: /45人容量/ },
     { ...project, name: `${project.name}-review`, testMatch: '**/member-review.spec.ts', use: { ...project.use, baseURL: 'http://127.0.0.1:4191' } },
     { ...project, name: `${project.name}-capacity`, testMatch: '**/site.spec.ts', grep: /45人容量/, use: { ...project.use, baseURL: 'http://127.0.0.1:4191' } },
   ]),

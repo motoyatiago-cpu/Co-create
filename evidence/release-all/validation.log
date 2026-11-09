@@ -1,0 +1,153 @@
+
+> group-one-studio@0.1.0 test:patch
+> node scripts/echo-literary-bridge.mjs && npm run build && npm run test:unit && playwright test -c playwright.patch.config.ts
+
+Echo bridge verified: 5 exact patches; baseline 4e402bcaeae6
+
+> group-one-studio@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 46 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip:   0.49 kB
+dist/assets/index-CVT3SmeE.css   29.03 kB │ gzip:   7.13 kB
+dist/assets/index-Ce_qctj5.js   823.73 kB │ gzip: 223.65 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 308ms
+
+> group-one-studio@0.1.0 test:unit
+> node --test tests/unit/*.test.mjs
+
+✔ ten UI identities map uniquely to the supplied prompts, not sample responses (1.0259ms)
+✔ A → B → A persists separately, three followups retain the selected history (1.1824ms)
+✔ duplicate send, late replies after switching, clear and disposal do not corrupt sessions (0.2389ms)
+✔ history budget retains current user and excludes unknown storage identities/roles (0.8728ms)
+✔ adapter supports explicit paths and refuses insecure/credential URLs before any request (0.4463ms)
+✔ adapter sends plain-text chat protocol, parses actual usage and redacts echoed key (18.5436ms)
+✔ empty, malformed, oversized, 429 and 5xx responses do not retry or leak upstream errors (3.3015ms)
+✔ timeout covers a stalled response body; cancellation is distinguishable (16.9887ms)
+✔ malformed and unavailable storage degrade safely (0.3797ms)
+✔ ten characters retain every reference field and all personality content after their opening identity clause (1.1605ms)
+✔ ordinary dialogue enters first person; identity disclosure is conditional, not a fixed opener or footer (0.3421ms)
+✔ four roles send all five specified cases and five ordinary followups with unchanged API/history semantics (2.3189ms)
+✔ prompt fix does not strip or rewrite existing replies, quotations, or user messages (0.1213ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 117.1803
+[WebServer] (node:4244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:40180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+✔ ten UI identities map uniquely to the supplied prompts, not sample responses (0.9058ms)
+✔ A → B → A persists separately, three followups retain the selected history (1.0595ms)
+✔ duplicate send, late replies after switching, clear and disposal do not corrupt sessions (0.2205ms)
+✔ history budget retains current user and excludes unknown storage identities/roles (0.3422ms)
+✔ adapter supports explicit paths and refuses insecure/credential URLs before any request (0.3796ms)
+✔ adapter sends plain-text chat protocol, parses actual usage and redacts echoed key (5.7053ms)
+✔ empty, malformed, oversized, 429 and 5xx responses do not retry or leak upstream errors (2.5339ms)
+✔ timeout covers a stalled response body; cancellation is distinguishable (10.84ms)
+✔ malformed and unavailable storage degrade safely (0.8379ms)
+✔ ten characters retain every reference field and all personality content after their opening identity clause (0.6881ms)
+✔ ordinary dialogue enters first person; identity disclosure is conditional, not a fixed opener or footer (0.629ms)
+✔ four roles send all five specified cases and five ordinary followups with unchanged API/history semantics (4.5744ms)
+✔ prompt fix does not strip or rewrite existing replies, quotations, or user messages (0.2173ms)
+
+Running 62 tests using 2 workers
+
+(node:27568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › tests\audio.spec.ts:41:1 › 无音频API时故事不会显示声音已开 (1.6s)
+  ok  2 [desktop] › tests\audio.spec.ts:27:1 › 故事实际开声、刷新恢复、静音和再开声，电平足够且无削波 (11.1s)
+  ok  4 [desktop] › tests\literary.spec.ts:34:1 › 十人人设、三次追问、A/B隔离、刷新与导出；桌面手机截图 (6.8s)
+  ok  5 [desktop] › tests\literary.spec.ts:86:1 › 无配置、空回复、429、跨域失败可回到原本地引擎；清空只影响指定范围 (1.8s)
+  ok  6 [desktop] › tests\literary.spec.ts:109:1 › 重复发送、停止等待、切人、离页清理、迟到响应；键盘可切换 (3.8s)
+  ok  7 [desktop] › tests\literary.spec.ts:133:1 › 旧版Key迁移清理，原设置与原解结JSON协议保持可用 (1.5s)
+  ok  8 [desktop] › tests\member-integration.spec.ts:8:1 › 成员墙四位优先展示，其他人保留原序且媒体ID不变 (1.1s)
+  ok  3 [desktop] › tests\audio.spec.ts:47:1 › 剪片所有情绪均有适度音量，静音恢复与导出音轨正常 (28.9s)
+  ok  9 [desktop] › tests\member-integration.spec.ts:22:1 › 32位名片对应Excel全部已填联系方式、空项隐藏并保留原公开邮箱 (6.4s)
+  ok 10 [desktop] › tests\member-integration.spec.ts:56:1 › 同一构建主站产品入口通向已合并的AI文学回声 (2.5s)
+  ok 11 [desktop] › tests\member-patch.spec.ts:7:1 › 长成员墙只加载临近视口头像，搜索和滚动仍能加载后段成员 (918ms)
+  ok 13 [desktop] › tests\member-patch.spec.ts:44:1 › 生产仅包含获准图片，排除工作簿、审核接口及风险截图 (1.7s)
+  ok 12 [desktop] › tests\member-patch.spec.ts:22:1 › 生产32张卡昵称与关键词分开、32头像一致、匿名与正式资料完整 (5.9s)
+  ok 15 [desktop] › tests\member-review.spec.ts:40:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (1.5s)
+  ok 16 [desktop] › tests\member-review.spec.ts:71:1 › 共创材料按需展开，原四幕不变，风险素材不公开 (1.7s)
+  ok 14 [desktop] › tests\member-review.spec.ts:6:1 › 32位成员的图库精确绑定，首图按需加载，多图切换与焦点恢复 (8.3s)
+  ok 18 [desktop] › tests\onboarding.spec.ts:14:1 › 解结结果下一步保留原保存与回复操作 (1.7s)
+  ok 17 [desktop] › tests\onboarding.spec.ts:3:1 › 回音结目的入口、本地可用、引导关闭与重新查看、五种宽度 (3.2s)
+  ok 20 [desktop] › tests\product-ip.spec.ts:4:1 › 封面按需加载、picture切换、六种宽度真实截图与短屏完整铺满 (3.6s)
+  ok 21 [desktop] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.8s)
+  ok 22 [desktop] › tests\site.spec.ts:32:1 › 搜索、打开、关闭、Escape与键盘焦点恢复 (2.0s)
+  ok 23 [desktop] › tests\site.spec.ts:62:1 › 减少动画、暂停漂浮与无横向溢出 (2.5s)
+  ok 24 [desktop] › tests\site.spec.ts:78:1 › 两款产品与四格故事均可进入完整体验 (1.1s)
+  ok 19 [desktop] › tests\onboarding.spec.ts:27:1 › 剪片示例至四步完成、可选配置可展开、播放和导出、五种宽度 (14.9s)
+  ok 26 [desktop] › tests\yu-source.spec.ts:22:1 › 六位联系卡片顺序与32人墙在五种宽度正常 (1.6s)
+  ok 25 [desktop] › tests\yu-source.spec.ts:5:1 › 源码包32位成员均可搜索并展开原始名片 (6.1s)
+  ok 27 [desktop] › tests\yu-source.spec.ts:43:1 › 保留原首页文字入场、流光和立体名片漂浮，减少动画可关闭 (2.0s)
+(node:23084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 29 [desktop-review] › tests\member-review.spec.ts:40:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (3.3s)
+  ok 30 [desktop-review] › tests\member-review.spec.ts:71:1 › 共创材料按需展开，原四幕不变，风险素材不公开 (1.7s)
+(node:38012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 28 [desktop-review] › tests\member-review.spec.ts:6:1 › 32位成员的图库精确绑定，首图按需加载，多图切换与焦点恢复 (11.7s)
+(node:49800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 31 [desktop-capacity] › tests\site.spec.ts:103:1 › 45人容量、每张名片可点击，每位成员均可找到并展开 (6.3s)
+(node:24240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 33 [mobile] › tests\audio.spec.ts:41:1 › 无音频API时故事不会显示声音已开 (1.5s)
+  ok 32 [mobile] › tests\audio.spec.ts:27:1 › 故事实际开声、刷新恢复、静音和再开声，电平足够且无削波 (10.2s)
+  ok 35 [mobile] › tests\literary.spec.ts:34:1 › 十人人设、三次追问、A/B隔离、刷新与导出；桌面手机截图 (5.6s)
+  ok 36 [mobile] › tests\literary.spec.ts:86:1 › 无配置、空回复、429、跨域失败可回到原本地引擎；清空只影响指定范围 (1.4s)
+  ok 37 [mobile] › tests\literary.spec.ts:109:1 › 重复发送、停止等待、切人、离页清理、迟到响应；键盘可切换 (3.2s)
+  ok 38 [mobile] › tests\literary.spec.ts:133:1 › 旧版Key迁移清理，原设置与原解结JSON协议保持可用 (1.1s)
+  ok 39 [mobile] › tests\member-integration.spec.ts:8:1 › 成员墙四位优先展示，其他人保留原序且媒体ID不变 (805ms)
+  ok 40 [mobile] › tests\member-integration.spec.ts:22:1 › 32位名片对应Excel全部已填联系方式、空项隐藏并保留原公开邮箱 (6.3s)
+  ok 41 [mobile] › tests\member-integration.spec.ts:56:1 › 同一构建主站产品入口通向已合并的AI文学回声 (1.4s)
+  ok 42 [mobile] › tests\member-patch.spec.ts:7:1 › 长成员墙只加载临近视口头像，搜索和滚动仍能加载后段成员 (827ms)
+  ok 34 [mobile] › tests\audio.spec.ts:47:1 › 剪片所有情绪均有适度音量，静音恢复与导出音轨正常 (28.8s)
+  ok 44 [mobile] › tests\member-patch.spec.ts:44:1 › 生产仅包含获准图片，排除工作簿、审核接口及风险截图 (1.4s)
+  ok 43 [mobile] › tests\member-patch.spec.ts:22:1 › 生产32张卡昵称与关键词分开、32头像一致、匿名与正式资料完整 (5.4s)
+  ok 46 [mobile] › tests\member-review.spec.ts:40:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (1.4s)
+  ok 47 [mobile] › tests\member-review.spec.ts:71:1 › 共创材料按需展开，原四幕不变，风险素材不公开 (1.6s)
+  ok 45 [mobile] › tests\member-review.spec.ts:6:1 › 32位成员的图库精确绑定，首图按需加载，多图切换与焦点恢复 (8.1s)
+  ok 49 [mobile] › tests\onboarding.spec.ts:14:1 › 解结结果下一步保留原保存与回复操作 (2.9s)
+  ok 48 [mobile] › tests\onboarding.spec.ts:3:1 › 回音结目的入口、本地可用、引导关闭与重新查看、五种宽度 (11.5s)
+  ok 51 [mobile] › tests\product-ip.spec.ts:4:1 › 封面按需加载、picture切换、六种宽度真实截图与短屏完整铺满 (6.1s)
+  ok 52 [mobile] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.1s)
+  ok 50 [mobile] › tests\onboarding.spec.ts:27:1 › 剪片示例至四步完成、可选配置可展开、播放和导出、五种宽度 (16.5s)
+  ok 53 [mobile] › tests\site.spec.ts:32:1 › 搜索、打开、关闭、Escape与键盘焦点恢复 (2.1s)
+  ok 55 [mobile] › tests\site.spec.ts:78:1 › 两款产品与四格故事均可进入完整体验 (893ms)
+  ok 54 [mobile] › tests\site.spec.ts:62:1 › 减少动画、暂停漂浮与无横向溢出 (2.4s)
+  ok 57 [mobile] › tests\yu-source.spec.ts:22:1 › 六位联系卡片顺序与32人墙在五种宽度正常 (1.3s)
+  ok 58 [mobile] › tests\yu-source.spec.ts:43:1 › 保留原首页文字入场、流光和立体名片漂浮，减少动画可关闭 (1.8s)
+  ok 56 [mobile] › tests\yu-source.spec.ts:5:1 › 源码包32位成员均可搜索并展开原始名片 (5.3s)
+(node:26496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 60 [mobile-review] › tests\member-review.spec.ts:40:1 › 大图、Escape层级、键盘与触屏滑动在六种宽度正常 (3.1s)
+  ok 61 [mobile-review] › tests\member-review.spec.ts:71:1 › 共创材料按需展开，原四幕不变，风险素材不公开 (1.9s)
+(node:21700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 59 [mobile-review] › tests\member-review.spec.ts:6:1 › 32位成员的图库精确绑定，首图按需加载，多图切换与焦点恢复 (11.1s)
+  ok 62 [mobile-capacity] › tests\site.spec.ts:103:1 › 45人容量、每张名片可点击，每位成员均可找到并展开 (5.9s)
+
+  62 passed (2.7m)

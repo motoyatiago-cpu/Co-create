@@ -1,0 +1,297 @@
+{
+  "authorization": "User: 图片要上线啊，本地所有修改都上线 (2026-11-09)",
+  "galleryPhotos": 55,
+  "storyMaterials": 2,
+  "excluded": [
+    "QR image4.jpeg",
+    "private-text image38.jpeg",
+    "device-text image44.jpeg",
+    "raw discussion screenshot",
+    "original workbook"
+  ],
+  "assets": [
+    {
+      "memberId": "member-01",
+      "file": "team/gallery/member-01-01.webp",
+      "sha256": "7b687ff3e5bb4bbe3d7e0b58423d4d2323a522fd37c90161be9e3245df965374"
+    },
+    {
+      "memberId": "member-01",
+      "file": "team/gallery/member-01-02.webp",
+      "sha256": "1fba337533b9cff67e1782b2846b660fd004de2df047a00e1612142ea0c03a1d"
+    },
+    {
+      "memberId": "member-02",
+      "file": "team/gallery/member-02-01.webp",
+      "sha256": "777ccdd038a9f544a92de9cd8c42f4f83a11b1379a5f2bb7e2c88b1fb9a08783"
+    },
+    {
+      "memberId": "member-04",
+      "file": "team/gallery/member-04-01.webp",
+      "sha256": "11a161ffc1b965a2a2a2d921430f21c73fca56493e984dd5766931bf122d8d0f"
+    },
+    {
+      "memberId": "member-05",
+      "file": "team/gallery/member-05-01.webp",
+      "sha256": "8ebea74897b2804ffb17dbbeb405d5e9f0a738fb32358d559811780015335099"
+    },
+    {
+      "memberId": "member-05",
+      "file": "team/gallery/member-05-02.webp",
+      "sha256": "04b00fc91e6d0a8ddff00418ac74005b8d67b78ca04aa34e6ab940570947a37c"
+    },
+    {
+      "memberId": "member-06",
+      "file": "team/gallery/member-06-01.webp",
+      "sha256": "1dae758f80ac0fef554f19ab25fe26fc1dd683a7a200c8f161bf95dfff6020a5"
+    },
+    {
+      "memberId": "member-06",
+      "file": "team/gallery/member-06-02.webp",
+      "sha256": "3dd76e388e93e0a985fab7c896d8ee23463895ed61311c8f45fc79ffd45046ec"
+    },
+    {
+      "memberId": "member-07",
+      "file": "team/gallery/member-07-01.webp",
+      "sha256": "f0b1b5422c1ba1eea3afa93e9ff06f24a7e27c865649ceca5e8992dfaa24f0c0"
+    },
+    {
+      "memberId": "member-08",
+      "file": "team/gallery/member-08-01.webp",
+      "sha256": "627d3a85bf464f1cad28671fbf4710af85bda85c2b5050041fee72c1e5cb72d7"
+    },
+    {
+      "memberId": "member-09",
+      "file": "team/gallery/member-09-01.webp",
+      "sha256": "e0b903a1ea3fb7fa95dbc49fab9323b3fdf52a612a3c5451fb04c8445e0b82bf"
+    },
+    {
+      "memberId": "member-09",
+      "file": "team/gallery/member-09-02.webp",
+      "sha256": "2f4f722553a267b08c15e799514e17e09c045ff6e2cc650451e21322de0e9075"
+    },
+    {
+      "memberId": "member-10",
+      "file": "team/gallery/member-10-01.webp",
+      "sha256": "3177f36ec4b839448573a44694c9fb55ae37b6f5b671cc5403e5b304d917218d"
+    },
+    {
+      "memberId": "member-11",
+      "file": "team/gallery/member-11-01.webp",
+      "sha256": "78f7f66273cff343bdeac6e786ccd07ff4626dc7fe7dadc27ececceacb7eabd8"
+    },
+    {
+      "memberId": "member-11",
+      "file": "team/gallery/member-11-02.webp",
+      "sha256": "5beb28b13887177fd4a6afd56800138f560dc4700386826a367c4c06c16be9cf"
+    },
+    {
+      "memberId": "member-11",
+      "file": "team/gallery/member-11-03.webp",
+      "sha256": "588d69e9cd190588bbf54a9f3bc5c50104509a3a19eefd65462792bb9c6f17db"
+    },
+    {
+      "memberId": "member-12",
+      "file": "team/gallery/member-12-01.webp",
+      "sha256": "8e707c377910ab6f99a02d2236fcd875c09c71721327fdcda2fcc0d5a937de4e"
+    },
+    {
+      "memberId": "member-13",
+      "file": "team/gallery/member-13-01.webp",
+      "sha256": "e37a971abc72acb7df6e0630d776f39a523dd0bbc04a94bd2d8105adc54b1ce5"
+    },
+    {
+      "memberId": "member-13",
+      "file": "team/gallery/member-13-02.webp",
+      "sha256": "ee4ac46af0326b2ba8858becbfb3c96ace6041bdbc7842cc129d7de302fa3c9a"
+    },
+    {
+      "memberId": "member-13",
+      "file": "team/gallery/member-13-03.webp",
+      "sha256": "2a2b590bb5b3e1c49eb1c4d73dc537878927193b3411d6b5f001c7531c2ee122"
+    },
+    {
+      "memberId": "member-13",
+      "file": "team/gallery/member-13-04.webp",
+      "sha256": "787c1f4277e777474d5e43705ca8e42fcc18ec981d1c1549e045956e2bb67650"
+    },
+    {
+      "memberId": "member-13",
+      "file": "team/gallery/member-13-05.webp",
+      "sha256": "278895e03852acaa6ab73941e7df6dad9119434b458bc43fcfed1c9d45f90506"
+    },
+    {
+      "memberId": "member-14",
+      "file": "team/gallery/member-14-01.webp",
+      "sha256": "0dbb3b888876b36513170cffeb9543c8f0bdeab95b2032a2af09b703b83adf67"
+    },
+    {
+      "memberId": "member-16",
+      "file": "team/gallery/member-16-01.webp",
+      "sha256": "122c2874374b6b62e9f35154c71efd8a5c40d3bd317a902cdea7c3ec359de41e"
+    },
+    {
+      "memberId": "member-16",
+      "file": "team/gallery/member-16-02.webp",
+      "sha256": "b8ecbf64fcadb270dcaf3786c4a8085303f22ace44b431155fab49cb19702e31"
+    },
+    {
+      "memberId": "member-16",
+      "file": "team/gallery/member-16-03.webp",
+      "sha256": "551763e20be1de35545ae237d2c706915207004f6cae5cc994434fad647916b6"
+    },
+    {
+      "memberId": "member-17",
+      "file": "team/gallery/member-17-01.webp",
+      "sha256": "b535f484083f1ab22d80d88f398545db31967969c897473817a44d4aa4cae1eb"
+    },
+    {
+      "memberId": "member-18",
+      "file": "team/gallery/member-18-01.webp",
+      "sha256": "fe05e43e5f4aba761dbaca72b263b390f5d4dfc9a2097e99488e66d644b2089b"
+    },
+    {
+      "memberId": "member-19",
+      "file": "team/gallery/member-19-01.webp",
+      "sha256": "8a0319c06c67135cca04140f9fafc441602e73026060f08987336749087ff118"
+    },
+    {
+      "memberId": "member-19",
+      "file": "team/gallery/member-19-02.webp",
+      "sha256": "2e29e0cb4837e0535bacf5ac6f5bc6838884be6467e641c24210ee0ced93dcd1"
+    },
+    {
+      "memberId": "member-20",
+      "file": "team/gallery/member-20-01.webp",
+      "sha256": "6f74709b7e7d05da9c71a64bf019b2f0a93d00c494a374c42796b5f866c14c77"
+    },
+    {
+      "memberId": "member-21",
+      "file": "team/gallery/member-21-01.webp",
+      "sha256": "821f0c1b955b0fb17ca09aad4c1b145822bf90233a428949fc1ebfd8cc975309"
+    },
+    {
+      "memberId": "member-22",
+      "file": "team/gallery/member-22-01.webp",
+      "sha256": "5eb3d15d8b0c2a9dca021df2e7d9f2059d4ec310251e206e7cb36ee444f023a7"
+    },
+    {
+      "memberId": "member-23",
+      "file": "team/gallery/member-23-01.webp",
+      "sha256": "daca81789c4d7d45746d5a027ff34a1039dd4b86774a264c9d1eeb07de3758a6"
+    },
+    {
+      "memberId": "member-23",
+      "file": "team/gallery/member-23-02.webp",
+      "sha256": "e8460deb5f55c51a8b05f783b7e1aad1dfad043cd667a430baf6e3eaa31b20eb"
+    },
+    {
+      "memberId": "member-23",
+      "file": "team/gallery/member-23-03.webp",
+      "sha256": "982ca3fa4f205abfcfad29ae9d11e3578bb764e0b9e860c482c9be12b0a5ccd8"
+    },
+    {
+      "memberId": "member-24",
+      "file": "team/gallery/member-24-02.webp",
+      "sha256": "78ef393ce69d9f7c5e702d02cf515fcc66908cac6acaf9f9127a1609983ef1e0"
+    },
+    {
+      "memberId": "member-25",
+      "file": "team/gallery/member-25-01.webp",
+      "sha256": "f19bfda8d5a60931ce312a74aa33cbf11228d6b6386281bbf721f07b401521c6"
+    },
+    {
+      "memberId": "member-25",
+      "file": "team/gallery/member-25-02.webp",
+      "sha256": "416cd8da739b13676e788232b6be5b0b6db67ed15d7bccac211d8bd91a7725ae"
+    },
+    {
+      "memberId": "member-26",
+      "file": "team/gallery/member-26-01.webp",
+      "sha256": "1db7e8c1c886507fe64caaeeb332de94b684ab52c43866e8ed7be29ca45440c4"
+    },
+    {
+      "memberId": "member-27",
+      "file": "team/gallery/member-27-01.webp",
+      "sha256": "0dfeaaba54ea2b3850a5441cec50c7cd4f7a24264426252b63818384c5642922"
+    },
+    {
+      "memberId": "member-29",
+      "file": "team/gallery/member-29-02.webp",
+      "sha256": "280599f2f98dcf125076a9af4d0f6a927645aafe2c3b3d4eb714f3b7af0de3a1"
+    },
+    {
+      "memberId": "member-30",
+      "file": "team/gallery/member-30-01.webp",
+      "sha256": "638fd028f7b8b8f6bfc334b907b12d25bbfe451a8eb742ce09c0d1d06a053239"
+    },
+    {
+      "memberId": "member-30",
+      "file": "team/gallery/member-30-02.webp",
+      "sha256": "f20212d240a88796b204c7353aa98196bc5c4ecdbe056fc5d0873ae9ad52d48e"
+    },
+    {
+      "memberId": "member-30",
+      "file": "team/gallery/member-30-03.webp",
+      "sha256": "4f703265e3f073c4cacae27263a815a83e89c87fb8f4afa619a9dc30386b285e"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-01.webp",
+      "sha256": "e8dcd33e40b99f09f5abcea56cce4ca26ce9db4943a6e73e0721e77a3e9e2159"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-02.webp",
+      "sha256": "90c7199b6f9671a90c472337bcad68aedd35656ba0b7c883b59f405f9a3710e7"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-03.webp",
+      "sha256": "b92e49023368c6dea9862a42a8764d5a60c23949636c0506bd73f8bf0c326566"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-04.webp",
+      "sha256": "4b6ec886d8e418a28ae8299e30166eb30ea15d69abaee6e6672535fd2036f89c"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-05.webp",
+      "sha256": "d26b3a328ae9b793c0226c3aa21a88c3ec2ad990d0d8c36aafcfd0cd194fe275"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-06.webp",
+      "sha256": "64c8eec5852e5249b5ef239e8b81ff585c15eefb73db850d952bc2fd3c6c55f1"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-07.webp",
+      "sha256": "5c2847d45caab95ede437f9d3c2ab0b03199b5818d27479b9df520e608847740"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-08.webp",
+      "sha256": "a5e2f9206a34edfc398f4680871c12c6ac063be48571661dbb80a0bad689090d"
+    },
+    {
+      "memberId": "member-31",
+      "file": "team/gallery/member-31-09.webp",
+      "sha256": "e352e533ac335db02a11d1cd9f80597512f01d4985a794f12d5075b4029f01dd"
+    },
+    {
+      "memberId": "member-32",
+      "file": "team/gallery/member-32-01.webp",
+      "sha256": "b2a5230f3c8e6db5c43fd66b833b804523de22e735fe707ca02805156c6af1fa"
+    },
+    {
+      "file": "story/materials/co_create_handdrawn_timeline.webp",
+      "sha256": "61df011c6f91f1efbbc3e4444b5c22c5d24257d149ab8627b618f85ae8101f15"
+    },
+    {
+      "file": "story/materials/a_group_concept_product_card.webp",
+      "sha256": "4f381cc570600dd75b0736dcc2abcb9bfd737ec1683eb56379014458810630d8"
+    }
+  ]
+}
