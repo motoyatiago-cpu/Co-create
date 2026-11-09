@@ -1,5 +1,7 @@
 # 成员墙与AI文学回声合并验收
 
+> 发布补记：用户于2026-11-09明确批准将合并版上线；应用提交 `ef84b0f` 已发布Cloudflare Production。下文“未部署”描述原隔离验收阶段，当前部署与在线复验结果见 [发布记录](CLOUDFLARE_DEPLOYMENT.md)。
+
 本轮在 `feature/celia-members-gallery-review` 上，将 `feature/echo-knot-persona-immersion` 的 `7187062` 合入成员补丁 `edb501d`，保留两个分支的历史。仅 `package.json` 的测试命令发生冲突，保留两套能力，并让 `test:patch` 同时运行桥接验证、构建、AI单元和浏览器回归。
 
 ## 当前效果

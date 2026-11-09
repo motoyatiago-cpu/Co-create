@@ -1,15 +1,16 @@
 # Cloudflare正式部署
 
-2026-11-08，用户明确要求“上线到cloudflare”后完成发布。
+2026-11-09，用户明确批准将合并版本发布到Cloudflare正式站并推送GitHub；本次已完成。
 
 - 正式地址：https://beichen-group1-co-create.pages.dev/
 - 独立项目：`beichen-group1-co-create`；账号下其他项目未修改。
 - 环境：**Production**；生产分支：`feature/celia-home-team`。
-- 当前发布的应用提交：`e72d1c1b719095bfac67085ea4ed10707f8d6808`（用户提供的Yu源码包优先版）。
-- 当前部署ID：`03fa90df-5140-43e3-b7c1-f66a7f56df04`。
-- 当前版本地址：https://03fa90df.beichen-group1-co-create.pages.dev/
+- 当前发布的应用提交：`ef84b0f`（AI文学回声、成员头像、四位优先排序及Excel联系方式合并版）。
+- 当前部署ID：`232e04cd-f5b9-4188-b194-3e899f4e19aa`。
+- 当前版本地址：https://232e04cd.beichen-group1-co-create.pages.dev/
 - 发布方式：[Cloudflare Pages Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/)，本机生产构建后用官方Wrangler 4.158.0上传。没有连接Git自动部署，也没有合并main。
-- 构建目录43个文件；只上传`dist`，未上传内部交接包、开发测试夹具、凭据或原始名册。第一次上线为`5549a86`/`b4e391dd-229a-47f3-935f-53e5f6599027`，本轮修正已覆盖正式域名，旧部署保留用于回退。
+- 构建目录59个文件；只上传`dist`，未上传内部交接包、开发测试夹具、凭据或原始Excel。55张个人候选图片和幕后候选素材未获公开许可，继续保留本机审核模式，不进入正式构建。用户本轮明确要求公开补齐的28人联系记录已按ID导入，4人空项保持空白；此前公开邮箱保留。
+- GitHub `feature/celia-home-team` 已从 `aa4aace` 安全快进至合并提交，保留AI和成员分支历史；未修改main。上一Production部署为 `d9674e4f-5449-4d46-9852-0404494620bf` / `aa4aace`，仍保留用于必要时回退。第一次上线为 `5549a86` / `b4e391dd-229a-47f3-935f-53e5f6599027`。
 
 ## 后续更新
 
@@ -30,12 +31,12 @@ npx --yes wrangler@4.158.0 pages deployment list --project-name beichen-group1-c
 
 ## 实际线上验证
 
-- 正式域名HTTP 200，Cloudflare部署列表确认Production及提交`e72d1c1`。
-- 浏览器验证桌面和iPhone触屏模拟，检查320、390、768、1024、1440px布局。
-- 当前线上JS与本机构建SHA-256一致：`8e80594835d64ae5bb717b7b25b4ebdc57ef92893988dc0c20a0b720a8a60fe4`。
-- 首页进入、32人原版立体名片墙、胡洁及拼音搜索、名片关闭、焦点恢复通过；本版默认界面按源码包，不再混入V1.2增强。
-- 回音结、把感受剪成片、四格故事均实际新标签打开；用户已明确确认4位联系人及邮箱公开，4张联系卡片和mailto链接已恢复。
-- 两个线上浏览器会话的脚本错误0，HTTP失败资源0。当前发布前的本地16项检查见源码包导入说明；历史46项属于旧增强版。
-- 当前原始线上检查JSON和截图保存于本机工作区`outputs/yu-source/online/`；首次上线记录在`outputs/cloudflare/`。本轮没有对所有真实手机、地区网络或Safari作保证。
+- 正式域名HTTP 200，Cloudflare部署列表确认Production及应用提交 `ef84b0f`。
+- 线上59个文件全部逐一验证SHA256，与通过13项AI单元测试、48项浏览器测试的本地构建一致。详见 `evidence/production-merged/online-verification.json`。
+- 实测桌面和iPhone触屏模拟；320/375/390/768/1024/1440px无横向溢出。首页、五区导航、32人CSS3D成员墙、首四位冯丽娜/臧文琪/于幸繁/陈佳、32头像、搜索、名片关闭与焦点恢复正常。
+- 线上抽查Excel微信、Q5联系ID、邮箱及空白字段；本地完整回归已逐一核对32人。#27仅显示“拼音”；匿名姓名扫描记录见成员合并验收报告。联系章节保持原五人和原顺序。
+- 从线上产品入口实际打开回音结，共鸣页显示十人人物和“本地回声 / AI文学回声”，两模式可切换；另检查电影产品与原四幕故事可访问。用户Key不复制到正式域名，首次使用需自行在页面设置填写；本轮未调用真实付费API。
+- 两个线上浏览器会话脚本错误0、HTTP失败资源0。主站水彩星云、章节布局和CSS3D保持现行版本，未恢复V1.2无限星河。
+- 本次线上截图保存在本机 `outputs/member-review-evidence/production-merged/`；没有宣称实体iPhone/Android、Safari或所有地区网络均已验证。
 
 历史V1.1/V1.2及合并说明中的“未发布”描述对应各自交付时点；当前状态以本部署记录为准。
