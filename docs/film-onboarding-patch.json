@@ -1,0 +1,12 @@
+{
+  "baseline": "199cb04",
+  "appBeforeSha256": "511c36656ea05b5adeb5b26a34476fa5d97a16ff4dbea2c7bb96c33d74a38d8a",
+  "appAfterSha256": "a9a84fd72c8f7f272e97589882bb99fc7b21708cdd67f86e3b44e99e815c189e",
+  "scope": [
+    "renderHome flow copy",
+    "optional upload/template/settings details",
+    "done secondary actions",
+    "two standalone HTML references"
+  ],
+  "rollback": "git restore --source=199cb04 -- public/experiences/feeling-film/js/app.js public/experiences/feeling-film/index.html; remove standalone onboarding files"
+}

@@ -483,12 +483,13 @@
         '</div>' +
       '</section>' +
       '<section class="band" aria-labelledby="home-flow-title">' +
-        '<div class="band-head"><h2 id="home-flow-title">三步，<br>把一天收进一段片。</h2>' +
+        '<div class="band-head"><h2 id="home-flow-title">四步，<br>把一天收进一段片。</h2>' +
           '<p>不是模板填空。你只负责说出感受，剩下的结构由它搭。片段、声音、字幕和节奏，会在同一次里完成。</p></div>' +
         '<ol class="flow">' +
-          '<li><span class="flow-num">其一</span><h3>丢下你有的</h3><p>几张照片、几段视频，或者只是今天的一句话。没有素材也可以开始。</p><span class="flow-mark">碎</span></li>' +
-          '<li><span class="flow-num">其二</span><h3>回答两道问题</h3><p>它先确认听见的情绪，再问它最不确定的两件事。不是考试，只是把方向说清。</p><span class="flow-mark">问</span></li>' +
-          '<li><span class="flow-num">其三</span><h3>收下你的故事</h3><p>片段、配乐、字幕、海报，还有一式情绪手势，一起交还给你。</p><span class="flow-mark">片</span></li>' +
+          '<li><span class="flow-num">其一</span><h3>说一句</h3><p>写下感受，也可以直接使用示例。</p><span class="flow-mark">碎</span></li>' +
+          '<li><span class="flow-num">其二</span><h3>挑画面</h3><p>优先使用推荐画面，上传自己的照片或视频是可选项。</p><span class="flow-mark">景</span></li>' +
+          '<li><span class="flow-num">其三</span><h3>回答两道问题</h3><p>它先确认听见的情绪，再问它最不确定的两件事。不是考试，只是把方向说清。</p><span class="flow-mark">问</span></li>' +
+          '<li><span class="flow-num">其四</span><h3>收下片</h3><p>片段、配乐、字幕、海报，还有一式情绪手势，一起交还给你。</p><span class="flow-mark">片</span></li>' +
         '</ol>' +
       '</section>' +
       '<section class="band" aria-labelledby="home-remember-title">' +
@@ -832,7 +833,7 @@
     var shape = D.shape(settings.shape);
     var quality = D.quality(settings.quality);
     var uploadOn = settings.musicMode === 'upload' && settings.musicData;
-    return '<div class="film-settings">' +
+    return '<details class="film-settings onboard-secondary"><summary>调整片长、画幅、画质与配乐（可选）</summary>' +
       '<div class="block-label"><span>片子的样子</span><span class="bl-aux">多长、什么画幅、多清楚</span></div>' +
       '<div class="setting-groups">' +
         '<div class="setting-group">' +
@@ -879,7 +880,7 @@
         '</div>' +
         '<div class="music-status" id="music-status"></div>' +
       '</div>' +
-    '</div>';
+    '</details>';
   }
 
   function stepMaterialsHTML(){
@@ -893,14 +894,14 @@
     return '<section class="panel">' +
       '<h2 class="panel-title">想放进去的画面。</h2>' +
       '<p class="panel-note">有照片或视频就丢进来；没有也没关系，它会从十二段画面里替你挑。<span class="kai">你只需要说「像不像今天」。</span></p>' +
-      '<label class="upload-drop" id="upload-drop">' +
+      '<details class="onboard-secondary"><summary>上传自己的照片或视频（可选）</summary><label class="upload-drop" id="upload-drop">' +
         '<span class="ud-icon">' + icon('plus') + '</span>' +
         '<span><span class="ud-main">把照片或视频放在这里</span><span class="ud-sub">一次可以选好几段，也可以什么都不放</span></span>' +
         '<input id="upload-input" type="file" accept="image/*,video/*" multiple>' +
       '</label>' +
-      '<div class="upload-status" id="upload-status"></div>' +
+      '<div class="upload-status" id="upload-status"></div></details>' +
       '<div class="material-block">' +
-        '<div class="material-head"><h3>它替你挑的画面</h3><p>按这一句的感受挑的</p></div>' +
+        '<div class="material-head"><h3>推荐画面 · 无需上传即可继续</h3><p>按这一句的感受挑的</p></div>' +
         '<div class="material-grid">' + suggested.map(function(id){
           var scene = sceneOf(id);
           if (!scene) return '';
@@ -934,7 +935,7 @@
         }).join('') + '</div>' +
         '<div class="material-foot"><span>素材只留在这台电脑里</span><span class="mf-hint">点一下选上，再点一下放下。</span></div>' +
       '</div>' : '') +
-      '<div class="template-block">' +
+      '<details class="template-block onboard-secondary"><summary>调整表达模板（可选）</summary>' +
         '<div class="block-label"><span>用哪一种说法</span><span class="bl-aux">决定开头和结尾的语气</span></div>' +
         '<div class="templates">' + D.templateOrder.map(function(key){
           var t = D.template(key);
@@ -945,7 +946,7 @@
             '<div class="tc-line">' + h(t.sub) + '</div>' +
           '</button>';
         }).join('') + '</div>' +
-      '</div>' +
+      '</details>' +
       filmSettingsHTML() +
       studioFootHTML('上一步', '去回答两道问题', 'data-next-step', '不选素材也行，它会替你补。') +
     '</section>';
@@ -1048,9 +1049,10 @@
           '</div>' +
           '<div class="done-actions">' +
             '<button class="btn btn-amber" type="button" data-play-film="' + h(film.id) + '">' + icon('play') + '放一遍</button>' +
+            '<details class="onboard-secondary"><summary>保存影片、海报与后续操作</summary><div class="onboard-export">' +
             '<button class="btn btn-ghost" type="button" data-save-poster="' + h(film.id) + '">' + icon('poster') + '存一张海报</button>' +
             '<button class="btn btn-ghost" type="button" data-save-film="' + h(film.id) + '">' + icon('download') + '存下影片</button>' +
-            '<button class="btn btn-ghost" type="button" data-new-draft>再剪一段</button>' +
+            '<button class="btn btn-ghost" type="button" data-new-draft>再剪一段</button></div></details>' +
           '</div>' +
           '<div class="done-note">' + notes + '<p class="dn-row">所有内容只留在这台电脑里。</p></div>' +
         '</div>' +
