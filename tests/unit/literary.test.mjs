@@ -16,7 +16,7 @@ test('ten UI identities map uniquely to the supplied prompts, not sample respons
     const persona = pack.personas.find(item => item.id === id);
     const messages = buildMessages(pack, id, [{ role: 'user', content: '我走得太慢' }]);
     assert.ok(messages[0].content.includes(persona.prompt));
-    assert.ok(messages[0].content.includes('不是历史本人'));
+    assert.ok(messages[0].content.includes('只有当用户明确询问'));
     assert.equal(messages[1].content, '我走得太慢');
     assert.equal(messages.length, 2);
   }
