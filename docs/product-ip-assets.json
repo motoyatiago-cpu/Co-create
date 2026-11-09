@@ -1,0 +1,46 @@
+[
+  {
+    "asset": "A-DESKTOP",
+    "sourceSha256": "23c9337a5e69897967d589c43b0977ae6eeedde6a18a55cc23f47595f06aed34",
+    "dimensions": [
+      1590,
+      600
+    ],
+    "originalBytes": 985015,
+    "webpBytes": 60874,
+    "webpSha256": "0669ce53de5ae50b58656dd530de9af2bc8509fb15f046bf9403ec5ee2a85fa5"
+  },
+  {
+    "asset": "A-MOBILE",
+    "sourceSha256": "88796d131dc0730078cfe63b451d7908898e0e55a6e4b48c2ff751d77748ee6d",
+    "dimensions": [
+      1152,
+      700
+    ],
+    "originalBytes": 982010,
+    "webpBytes": 85318,
+    "webpSha256": "1b2d224a06a8d8731bd2cc30a3c2ac596e276b413d458601873b7dea142a3100"
+  },
+  {
+    "asset": "B-DESKTOP",
+    "sourceSha256": "1cb2960ab9bbf400598cde65c46d656b33afdea8f4e70ea83593fc68c3192231",
+    "dimensions": [
+      1590,
+      600
+    ],
+    "originalBytes": 866571,
+    "webpBytes": 45900,
+    "webpSha256": "b6e557536154d5524adc12e801e9bde3b68017ec0768a21fa3a4c9ca172e2a71"
+  },
+  {
+    "asset": "B-MOBILE",
+    "sourceSha256": "15fcb0d32830ef32d6437f4bf07b2158f0439ca6286ba85f85caa0d0d226ee3f",
+    "dimensions": [
+      1152,
+      700
+    ],
+    "originalBytes": 813554,
+    "webpBytes": 53306,
+    "webpSha256": "862b3e7e2a44c0db42ff1b5d540a2253f4031e8b6ccf6ce069f8c107cd91037a"
+  }
+]

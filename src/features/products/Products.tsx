@@ -21,24 +21,13 @@ const products = [
 ] as const;
 
 function ProductVisual({ id }: { id: (typeof products)[number]['id'] }) {
-  if (id === 'echo-knot') {
-    return <div className="product-card__visual product-card__visual--knot" aria-hidden="true">
-      <span className="product-card__halo" />
-      <svg viewBox="0 0 260 180">
-        <path d="M52 95C31 49 89 27 127 73c37 45 94 23 78-21" />
-        <path d="M58 83c21-45 78-28 72 20-6 48 59 56 78 14" />
-        <path d="M91 55c-29 37-1 87 43 68 44-19 70 16 52 45" />
-      </svg>
-      <span className="product-card__echo product-card__echo--one" />
-      <span className="product-card__echo product-card__echo--two" />
-    </div>;
-  }
-
-  return <div className="product-card__visual product-card__visual--film" aria-hidden="true">
-    <div className="product-card__film-strip">
-      {['迟疑', '微光', '靠近', '松开'].map(word => <span key={word}>{word}</span>)}
-    </div>
-    <span className="product-card__cut-line" />
+  const asset = id === 'echo-knot' ? 'a' : 'b';
+  const base = `${import.meta.env.BASE_URL}products/ip/${asset}`;
+  return <div className="product-card__visual product-card__visual--ip" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 420px)" srcSet={`${base}-mobile.webp`} width="1152" height="700" />
+      <img src={`${base}-desktop.webp`} width="1590" height="600" alt="" loading="lazy" decoding="async" />
+    </picture>
   </div>;
 }
 
