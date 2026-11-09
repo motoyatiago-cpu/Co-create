@@ -12,7 +12,7 @@ export const presentedMembers = [
 // Keep the previously approved public emails in addition to Excel contacts.
 const contactIds: Readonly<Record<string, string>> = {
   '冯丽娜': 'member-08', '臧文琪': 'member-01', '于幸繁': 'member-10',
-  '陈佳': 'member-16', '余海燕': 'member-31',
+  '陈佳': 'member-16', '余海燕': 'member-31', '刘艺莹': 'member-05',
 };
 const contacts: Record<string, MemberContact[]> = Object.fromEntries(
   members.map(member => [member.id, [...(excelMemberContacts[member.id] ?? [])]]),

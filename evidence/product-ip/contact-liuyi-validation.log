@@ -1,0 +1,36 @@
+[WebServer] (node:9648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:33544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+✔ ten UI identities map uniquely to the supplied prompts, not sample responses (0.9972ms)
+✔ A → B → A persists separately, three followups retain the selected history (1.2481ms)
+✔ duplicate send, late replies after switching, clear and disposal do not corrupt sessions (0.241ms)
+✔ history budget retains current user and excludes unknown storage identities/roles (0.3376ms)
+✔ adapter supports explicit paths and refuses insecure/credential URLs before any request (0.4403ms)
+✔ adapter sends plain-text chat protocol, parses actual usage and redacts echoed key (6.3569ms)
+✔ empty, malformed, oversized, 429 and 5xx responses do not retry or leak upstream errors (3.0413ms)
+✔ timeout covers a stalled response body; cancellation is distinguishable (35.6851ms)
+✔ malformed and unavailable storage degrade safely (0.9588ms)
+✔ ten characters retain every reference field and all personality content after their opening identity clause (0.6687ms)
+✔ ordinary dialogue enters first person; identity disclosure is conditional, not a fixed opener or footer (0.4292ms)
+✔ four roles send all five specified cases and five ordinary followups with unchanged API/history semantics (1.7259ms)
+✔ prompt fix does not strip or rewrite existing replies, quotations, or user messages (0.1649ms)
+
+Running 6 tests using 2 workers
+
+(node:21936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [desktop] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.5s)
+  ok 3 [desktop] › tests\yu-source.spec.ts:22:1 › 六位联系卡片顺序与32人墙在五种宽度正常 (1.4s)
+(node:14956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [desktop] › tests\member-integration.spec.ts:22:1 › 32位名片对应Excel全部已填联系方式、空项隐藏并保留原公开邮箱 (6.4s)
+(node:53412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [mobile] › tests\site.spec.ts:3:1 › 首页、五区导航与进入按钮 (2.5s)
+  ok 6 [mobile] › tests\yu-source.spec.ts:22:1 › 六位联系卡片顺序与32人墙在五种宽度正常 (1.4s)
+  ok 4 [mobile] › tests\member-integration.spec.ts:22:1 › 32位名片对应Excel全部已填联系方式、空项隐藏并保留原公开邮箱 (6.4s)
+
+  6 passed (15.6s)

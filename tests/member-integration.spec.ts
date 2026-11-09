@@ -28,7 +28,7 @@ test('32位名片对应Excel全部已填联系方式、空项隐藏并保留原�
     const tile = page.getByRole('button', { name: `打开${member.name}的名片`, exact: true });
     await tile.click();
     const contacts = publicMemberContacts[member.id];
-    const extraEmail = ['member-01', 'member-08', 'member-10'].includes(member.id) ? 1 : 0;
+    const extraEmail = ['member-01', 'member-05', 'member-08', 'member-10'].includes(member.id) ? 1 : 0;
     expect(contacts).toHaveLength(contactCounts[member.id] + extraEmail);
     await expect(page.locator('.member-contact dl > div')).toHaveCount(contacts.length);
     for (const contact of contacts) {

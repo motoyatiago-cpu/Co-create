@@ -25,6 +25,7 @@ export const copy = {
       { name: '陈佳', nickname: '阿若', email: 'cuijun202608@163.com' },
       { name: '臧文琪', nickname: '呵', email: '2731161093@qq.com' },
       { name: '余海燕', nickname: '@me', email: 'fercy666@163.com' },
+      { name: '刘艺莹', nickname: '六一', email: 'liuyi_0915@qq.com' },
     ],
   },
 } as const;

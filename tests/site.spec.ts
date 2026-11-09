@@ -21,7 +21,7 @@ test('首页、五区导航与进入按钮', async ({ page }) => {
     await expect(page.locator('[data-chapter]:visible')).toHaveAttribute('id', id);
   }
   await expect(page.locator('a[href^="tel:"], a[href="#"]')).toHaveCount(0);
-  await expect(page.locator('.contact-card')).toHaveCount(5);
+  await expect(page.locator('.contact-card')).toHaveCount(6);
   for (const email of ['cclia1126@gmail.com', 'cuijun202608@163.com', '2731161093@qq.com', 'strggle521yu@163.com']) {
     await expect(page.locator(`a[href="mailto:${email}"]`)).toBeVisible();
   }
